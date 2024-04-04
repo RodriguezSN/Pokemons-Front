@@ -18,11 +18,22 @@
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
-const { conn } = require('./src/db.js');
+const { sequelize } = require('./src/db.js');
+const PORT = 3001
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
-  server.listen(3001, () => {
-    console.log('%s listening at 3001'); // eslint-disable-line no-console
-  });
-});
+// sequelize.sync({ force: true }).then(() => {
+//   server.listen(3001, () => {
+//     console.log('%s listening at 3001'); // eslint-disable-line no-console
+//     console.log(sequelize)
+//   });
+// });
+
+server.listen(PORT, async () => {
+  try {
+    await sequelize.sync({force:true})
+    console.log(`Server on listening http://localhost:${PORT}`)
+  } catch (error) {
+    console.log(error.message)
+  }
+})
