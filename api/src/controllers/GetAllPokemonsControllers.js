@@ -1,12 +1,14 @@
 const axios = require("axios")
-const {Pokemons, Types} = require("../db")
+const {Pokemon, Type} = require("../db")
 const URL_LIMIT = `https://pokeapi.co/api/v2/pokemon?offset=0&limit=400`
 const URL = `https://pokeapi.co/api/v2/pokemon`
+
+
+
 const getAllPokemonsControllers = async () => {
 
     const {data} = await axios.get(URL_LIMIT)
     const {results} = data
-
 
     const pokemonsPromises = results.map( async (pokemon) => {
         const {data} = await axios.get(pokemon.url)
@@ -14,6 +16,7 @@ const getAllPokemonsControllers = async () => {
     })
 
     const pokemons = await Promise.all(pokemonsPromises)
+
 
     const pokemonsApi = []
 
@@ -32,6 +35,18 @@ const getAllPokemonsControllers = async () => {
         }
         pokemonsApi.push(newPokemon)
     })
+
+    const pokemonsDb = []
+
+    const dataDb = await Pokemon.findAll({
+        include:{
+            model: Type,
+            attributes: ["name"],
+            through: {attributes:[]}
+        }
+    });
+
+    console.log(dataDb)
 
     return pokemonsApi
     
