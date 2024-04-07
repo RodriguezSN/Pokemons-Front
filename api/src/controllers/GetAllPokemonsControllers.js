@@ -7,7 +7,7 @@ const URL = `https://pokeapi.co/api/v2/pokemon`
 
 const getAllPokemonsControllers = async () => {
 
-    const {data} = await axios.get(URL_LIMIT)
+    const {data} = await axios.get(URL)
     const {results} = data
 
     const pokemonsPromises = results.map( async (pokemon) => {
@@ -45,10 +45,12 @@ const getAllPokemonsControllers = async () => {
             through: {attributes:[]}
         }
     });
+    // dataDb [pokemon{ dataValues:{} _proviusDataValues:{},..} pokemon {dataValues:{} _proviusDataValues:{},..}]
+    dataDb.map(pokemons => {
+        pokemonsDb.push(pokemons.dataValues)
+    })
 
-    console.log(dataDb)
-
-    return pokemonsApi
+    return {pokemonsApi, pokemonsDb}
     
     
 }

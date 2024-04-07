@@ -1,26 +1,19 @@
 const axios = require("axios")
-const {Pokemon, Type} = require("../db")
-const URL = `https://pokeapi.co/api/v2/pokemon`
 
 const getIdPokemonController = async (id) => {
-
-    const {data} = await axios.get(`${URL}/${id}`)
- 
-
-    const pokemonApi = {
-        id: data.id,
-        name: data.name,
-        image: data.sprites?.front_default,
-        hp: data.stats[0].base_stat,
-        attack: data.stats[1].base_stat,
-        defense: data.stats[2].base_stat,
-        speed: data.stats[5].base_stat,
-        height: data.height,
-        weight: data.weight,
-        origin: "api"
+    const idNumber = Number(id)
+       
+    if(isNaN(idNumber)){
+        return "Ingrese un numero"
+    }else if(idNumber < 1 || idNumber > 20){
+        return "Ingrese un numero entre 1 y 20"    
+    }else{
+        const {data} = await axios.get(`http://localhost:3001/pokemon`)
+        const pokemonForId = data.pokemonsApi.find(pokemon => {
+            return pokemon.id === idNumber
+        })
+        return pokemonForId
     }
-
-    return pokemonApi
     
 }
 
