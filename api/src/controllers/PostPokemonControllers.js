@@ -11,8 +11,9 @@ const postPokemonControllers = async ({name, image, hp, attack, defense, speed, 
 
     //compruebo si ya existe en la api o en la db
     const {data} = await axios.get(`http://localhost:3001/pokemon`)
-    const existeAPI = data.find( pokemon => pokemon.name === name)
-    const existeDB = await Pokemon.findOne({where:{name}})
+    console.log(data)
+    const existeAPI = data.pokemonsApi.find( pokemon => pokemon.name === name)
+    const existeDB = data.pokemonsDb.find( pokemon => pokemon.name === name)
     if(existeAPI || existeDB){
         return "Ya existe este pokemons"
     }

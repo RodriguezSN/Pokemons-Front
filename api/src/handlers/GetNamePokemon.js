@@ -3,8 +3,7 @@ const getNamePokemonControllers = require("../controllers/GetNamePokemonControll
 
 const getNamePokemon = async (req,res) => {
     try {
-        const {name} = req.query
-        console.log("buscando desde name")
+        const {name} = req.params
         const result = await getNamePokemonControllers(name)
         res.json(result)
     } catch (error) {

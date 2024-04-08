@@ -2,20 +2,24 @@ const axios = require("axios")
 const {Pokemon, Type} = require("../db")
 
 const getNamePokemonControllers = async (name) => {
-    
-    const {data} = axios.get(`http://localhost:3001/pokemon`)
+    const nameTolowerkeado = name.toLowerCase()
+    console.log(name)
+    const {data} = await axios.get(`http://localhost:3001/pokemon`)
     const existeAPI = data.pokemonsApi.find( pokemon => {
-        pokemon.name.toLoweCase() === name.toLoweCase()
+       return pokemon.name.toLowerCase().includes(name.toLowerCase())
     })
     const existeDB = data.pokemonsDb.find(pokemon => {
-        pokemon.name.toLoweCase() === name.toLoweCase()
+       return pokemon.name.toLowerCase().includes(name.toLowerCase())
     })
-    if(existeAPI.name){
-        return existeAPI
-    }else if(existeDB.name){
+
+    if(existeAPI && existeDB){
+        return {existeAPI, existeDB}
+    }else if(existeDB){
         return existeDB
+    }else if(existeAPI){
+        return existeAPI
     }else{
-        return "Algo paso"
+        return "No se encontraron coincidencias"
     }
    
 }

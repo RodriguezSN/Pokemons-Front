@@ -10,7 +10,7 @@ pokemonRouter.get("/", getAllPokemons )
 
 pokemonRouter.get("/:id", getIdPokemons)
 
-pokemonRouter.get("/name", getNamePokemon)
+pokemonRouter.get("/name/:name", getNamePokemon)
 
 pokemonRouter.post("/", postPokemon)
 module.exports = pokemonRouter
