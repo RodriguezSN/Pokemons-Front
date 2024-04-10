@@ -1,6 +1,6 @@
+import React from "react"
 import Cards from "../cards/Cards"
 import NavBar from "../navBar/NavBar"
-
 
 const Home = () => {
     

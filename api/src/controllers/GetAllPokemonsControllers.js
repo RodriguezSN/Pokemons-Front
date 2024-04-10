@@ -31,6 +31,7 @@ const getAllPokemonsControllers = async () => {
             speed: pokemon.stats[5]?.base_stat,
             height: pokemon.height,
             weight: pokemon.weight,
+            type: pokemon.types,
             origin: "api"
         }
         pokemonsApi.push(newPokemon)

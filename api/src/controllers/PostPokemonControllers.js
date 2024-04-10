@@ -1,7 +1,7 @@
 const { where } = require("sequelize")
 const {Pokemon, Type} = require("../db")
 const axios = require("axios")
-const postPokemonControllers = async ({name, image, hp, attack, defense, speed, height, weight, typeId}) => {
+const postPokemonControllers = async ({name, image, hp, attack, defense, speed, height, weight, typeId, origin}) => {
 
     //compruebo si faltan datos
     if( !name || !image || !hp || !attack ||
@@ -11,7 +11,7 @@ const postPokemonControllers = async ({name, image, hp, attack, defense, speed, 
 
     //compruebo si ya existe en la api o en la db
     const {data} = await axios.get(`http://localhost:3001/pokemon`)
-    console.log(data)
+    
     const existeAPI = data.pokemonsApi.find( pokemon => pokemon.name === name)
     const existeDB = data.pokemonsDb.find( pokemon => pokemon.name === name)
     if(existeAPI || existeDB){
@@ -28,7 +28,7 @@ const postPokemonControllers = async ({name, image, hp, attack, defense, speed, 
         speed: speed,
         height: height,
         weight: weight,
-        createdInDB: true
+        origin: origin
     })
     //pasamos el id del type de string a Number
     const idTypesNumber = typeId.map( id => Number(id))
