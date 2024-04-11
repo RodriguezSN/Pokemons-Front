@@ -20,7 +20,6 @@ const NavBar = () => {
         setName(value)
     }
     const handleSearch = () => {
-
         dispatch(getPokemonsName(name))
         setName("")
     }

@@ -1,10 +1,11 @@
 import React, { useState } from "react"
 import axios from "axios"
-import { Link } from "react-router-dom"
+import { Link , useNavigate} from "react-router-dom"
 import {useSelector} from "react-redux"
 
 const Forms = () => {
 
+    const navigate = useNavigate()
     const allTypes = useSelector(state => state.allTypes)
    
     const [post, setPost] = useState({
@@ -34,6 +35,7 @@ const Forms = () => {
         try {
              await axios.post(`http://localhost:3001/pokemon`, post)
             alert("se cargo con exito")
+            navigate("/home")
         } catch (error) {
             console.log(error.message)
         }
@@ -42,13 +44,23 @@ const Forms = () => {
     const handleSelector = (event) => {
         const {value} = event.target
         if(!post.typeId.includes(value)){
-
+            if(value === "" || value === "--"){
+                setPost({...post})
+            }
             setPost({
                 ...post,
                 typeId:[ ...post.typeId, value]
             })
         }
        
+    }
+    const handleDeleteType = (event, typeDelete) => {
+        event.stopPropagation();
+        const newTypes = post.typeId.filter(type => type !== typeDelete)
+        setPost({
+            ...post,
+            typeId: newTypes
+        })
     }
 
     return (
@@ -88,14 +100,30 @@ const Forms = () => {
                     <label htmlFor="weight">Weight: </label>
                     <input type="number" placeholder="weight" name="weight" id="weight" onChange={handleChange}/>
                 </div>
-                <select name="type" id="type" onChange={handleSelector}>
-                    {
-                        allTypes.map( type => (
-                            <option key={type.id} value={type.id}>{type.name}</option>
-                        ))
-                    }
-                </select>
-                <button type="submit">Create</button>
+                <div className="formsSelect">
+                    <select name="type" id="type" onChange={handleSelector}>
+                        <option value="" selected disabled hidden >--</option>
+
+                        {
+                            allTypes.map( type => (
+                                <option key={type.id} value={type.id}>{type.name}</option>
+                            ))
+                        }
+                    </select>
+                </div>
+                <div className="typesSelect">
+                        {
+                            post.typeId.map((type) => (
+                                <div className="typesButton" key={type}> 
+                                    <button onClick={() => handleDeleteType(event, type)}>{allTypes[type-1].name}</button>                                  
+                                </div>
+                            ))
+                        }
+                </div>
+                <hr />
+                <div className="buttonSubmit">
+                    <button type="submit">Create</button>
+                </div>
             </form>
         </div>
     )
