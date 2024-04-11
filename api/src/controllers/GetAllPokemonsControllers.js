@@ -17,10 +17,13 @@ const getAllPokemonsControllers = async () => {
 
     const pokemons = await Promise.all(pokemonsPromises)
 
-
+    
     const pokemonsApi = []
-
+    
+    
     pokemons.map( pokemon => {
+        const type = pokemon.types.map(types => types.type.name)
+
         const newPokemon = {
             id: pokemon.id,
             name: pokemon.name,
@@ -31,7 +34,7 @@ const getAllPokemonsControllers = async () => {
             speed: pokemon.stats[5]?.base_stat,
             height: pokemon.height,
             weight: pokemon.weight,
-            type: pokemon.types,
+            type: type,
             origin: "api"
         }
         pokemonsApi.push(newPokemon)

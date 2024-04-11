@@ -12,6 +12,8 @@ const getNamePokemonControllers = async (name) => {
        }
     })
     data.pokemonsDb.forEach(pokemon => {
+        // console.log("db: ", pokemon.name.toLowerCase())
+        // console.log("name a buscar: ", name.toLowerCase())
          if(pokemon.name.toLowerCase().includes(name.toLowerCase())){
             existeDB.push(pokemon)
          }
