@@ -27,6 +27,11 @@ const NavBar = () => {
         dispatch(getAllPokemons())
     }
 
+    const handleFiltros = ({target}) => {
+        const {value} = target
+        console.log(value)
+    }
+
     return (
         <div>
             <div className="divForms">
@@ -45,6 +50,34 @@ const NavBar = () => {
                     <button>Log out</button>
                 </Link>
             </div>
+            <div className="filtroTypes">
+                <label >Por types: </label>
+                <select name="filtro" id="filtro" defaultValue="sin filtro" onChange={handleFiltros}>
+                    <option value="sin filtro" disabled hidden>Sin filtro</option>
+                    {
+                        allTypes.map( type => (
+                            <option value={type.name} key={type.name}>{type.name}</option>
+                        ))
+                    }
+                </select>
+            </div>
+            <div className="filtroAZ">
+                <label>Orden: </label>
+                <select name="filtro" id="filtro" defaultValue="sin filtro" onChange={handleFiltros}>
+                    <option value="sin filtro" disabled hidden>Sin filtro</option>
+                    <option value="a-z" key="a-z" >Ascendente</option>
+                    <option value="z-a" key="z-a">Descendente</option>
+                </select>
+            </div>
+            <div className="filtroDBoAPI">
+                <label>api/db: </label>
+                <select name="filtro" id="filtro" defaultValue="sin filtro" onChange={handleFiltros}>
+                    <option value="sin filtro" disabled hidden>Sin filtro</option>
+                    <option value="api" key="api" >API</option>
+                    <option value="db" key="db">DB</option>
+                </select>
+            </div>
+            <hr />
         </div>
     )
 }

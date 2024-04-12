@@ -2,8 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 const Card = ({id, name, image, type}) => {
-    
-    console.log(image)
+  
     return (
         <div key={id}>
             <h3>{name}</h3>

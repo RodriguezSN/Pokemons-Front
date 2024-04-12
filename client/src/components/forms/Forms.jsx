@@ -101,8 +101,8 @@ const Forms = () => {
                     <input type="number" placeholder="weight" name="weight" id="weight" onChange={handleChange}/>
                 </div>
                 <div className="formsSelect">
-                    <select name="type" id="type" onChange={handleSelector}>
-                        <option value="" selected disabled hidden >--</option>
+                    <select name="type" id="type" value="" onChange={handleSelector}>
+                        <option value=""    disabled hidden >--</option>
 
                         {
                             allTypes.map( type => (

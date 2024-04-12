@@ -39,6 +39,8 @@ const Detail = () => {
                 <h2>Speed: {pokemon.speed}</h2>
                 <h2>Height: {pokemon.height}</h2>
                 <h2>Weight: {pokemon.weight}</h2>
+                <h2>Style:</h2>
+                {pokemon.type?.map(type => (<div key={type}><label>{type}</label><br/></div>))}
                 <h2>Origin: {pokemon.origin}</h2>
             </div>
         </div>
