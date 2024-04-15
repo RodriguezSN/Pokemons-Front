@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import React,  { useEffect, useState } from "react"
-import { getAllPokemons, getAllTypes, getPokemonsName } from "../../redux/actions"
+import { getAllPokemons, getAllTypes, getPokemonsName, pokemonByApiOrDb, pokemonsByOrder } from "../../redux/actions"
 
 const NavBar = () => {
     const dispatch = useDispatch()
@@ -27,9 +27,12 @@ const NavBar = () => {
         dispatch(getAllPokemons())
     }
 
-    const handleFiltros = ({target}) => {
-        const {value} = target
-        console.log(value)
+    const handleFiltrosOrigin = ({target}) => {
+        dispatch(pokemonByApiOrDb(target.value))
+    }
+
+    const handleFiltrosOrden = ({target}) => {
+        dispatch(pokemonsByOrder(target.value))
     }
 
     return (
@@ -52,8 +55,8 @@ const NavBar = () => {
             </div>
             <div className="filtroTypes">
                 <label >Por types: </label>
-                <select name="filtro" id="filtro" defaultValue="sin filtro" onChange={handleFiltros}>
-                    <option value="sin filtro" disabled hidden>Sin filtro</option>
+                <select name="filtro" id="filtro" defaultValue="sin filtro" >
+                    <option value="sin filtro" key="sin filtro">Sin filtro</option>
                     {
                         allTypes.map( type => (
                             <option value={type.name} key={type.name}>{type.name}</option>
@@ -63,16 +66,16 @@ const NavBar = () => {
             </div>
             <div className="filtroAZ">
                 <label>Orden: </label>
-                <select name="filtro" id="filtro" defaultValue="sin filtro" onChange={handleFiltros}>
-                    <option value="sin filtro" disabled hidden>Sin filtro</option>
+                <select name="filtro" id="filtro" defaultValue="sin filtro" onChange={handleFiltrosOrden}>
+                    <option value="sin filtro" key="sin filtro">Sin filtro</option>
                     <option value="a-z" key="a-z" >Ascendente</option>
                     <option value="z-a" key="z-a">Descendente</option>
                 </select>
             </div>
             <div className="filtroDBoAPI">
                 <label>api/db: </label>
-                <select name="filtro" id="filtro" defaultValue="sin filtro" onChange={handleFiltros}>
-                    <option value="sin filtro" disabled hidden>Sin filtro</option>
+                <select name="filtro" id="filtro" defaultValue="ambos" onChange={handleFiltrosOrigin}>
+                    <option value="ambos" key="ambos">Ambos</option>
                     <option value="api" key="api" >API</option>
                     <option value="db" key="db">DB</option>
                 </select>

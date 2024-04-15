@@ -5,6 +5,7 @@ import Card from "../card/Card"
 const Cards = ({page, setPage}) => {
 
     const allPokemons = useSelector(state => state.allPokemons)
+    
     const dispatch = useDispatch() 
     const [loanding, setLoanding] = useState(true)
     useEffect(()=>{
@@ -56,7 +57,7 @@ const Cards = ({page, setPage}) => {
                 ) : (
                     <div>
                     {
-                        allPokemons.length > 0 ? (
+                        allPokemons.length >= 0 ? (
                             allPokemons.slice(startIndex,endIndex).map( (pokemon, index) => (
                                 <Card {...pokemon} key={index} ></Card>
                             ))
@@ -69,11 +70,11 @@ const Cards = ({page, setPage}) => {
                 )
              }    
             <div className="paginado">
-                <button onClick={goToFirsPage}>◄◄</button>
+                <button onClick={goToFirsPage} disabled={page === 1}>◄◄</button>
                 <button onClick={prevPage} disabled={page === 1}>◄</button>
                 <span>{page}</span>
                 <button onClick={nextPage} disabled={endIndex >= allPokemons.length}>►</button>
-                <button onClick={goToLastPage}>►►</button>
+                <button onClick={goToLastPage} disabled={endIndex >= allPokemons.length}>►►</button>
             </div>
         </div>
      )
