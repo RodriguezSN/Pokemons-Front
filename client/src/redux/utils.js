@@ -1,6 +1,6 @@
 export const originPokemons = (filterBy, array, order, type) => {
     
-   
+
     switch(filterBy){
         case "api":
         {
@@ -83,7 +83,7 @@ export const originPokemons = (filterBy, array, order, type) => {
 
 
 export const orderPokemons = (filterBy, array, origin, type) => {
-    
+ 
     switch(filterBy){
         case "a-z": 
             {
@@ -103,11 +103,12 @@ export const orderPokemons = (filterBy, array, origin, type) => {
                         //     return newArray.sort((a,b) =>  a.name.localeCompare(b.name))
                         // }
                     return newArray.sort((a,b) =>  a.name.localeCompare(b.name))
-                }
-                // if(type !== "sin filtro"){
-                //     array = orderPokemonsByType(type, newArray, "sin filtro", "ambos")
-                //     return array.sort((a,b) =>  a.name.localeCompare(b.name))
-                // }
+                } 
+                    // if(type !== "sin filtro"){
+                    //     array = orderPokemonsByType(type, newArray, "sin filtro", "ambos")
+                    //     return array.sort((a,b) =>  a.name.localeCompare(b.name))
+                    // }
+                
                 return array.sort((a,b) =>  a.name.localeCompare(b.name))
             }
         case "z-a":
@@ -128,12 +129,14 @@ export const orderPokemons = (filterBy, array, origin, type) => {
                         //     return newArray.sort( (a,b) =>  b.name.localeCompare(a.name))
                         // }
                     return newArray.sort( (a,b) =>  b.name.localeCompare(a.name))
-                }
+                } 
                     // if(type !== "sin filtro"){
                     //    array = orderPokemonsByType(type, newArray, "sin filtro", "ambos")
                     //     return array.sort( (a,b) =>  b.name.localeCompare(a.name))
                     // }
+                
                 return array.sort( (a,b) =>  b.name.localeCompare(a.name))
+                    
             }
         default:
             {
@@ -154,10 +157,11 @@ export const orderPokemons = (filterBy, array, origin, type) => {
                         // }
                     return newArray 
                 }
-                    // if(type !== "sin filtro"){
-                    //     array = orderPokemonsByType(type, newArray, "sin filtro", "ambos")
-                    //     return array 
-                    // }
+                //    if(type !== "sin filtro"){
+                //         array = orderPokemonsByType(type, newArray, "sin filtro", "ambos")
+                //         return array 
+                //     } 
+                    
                 return array 
             }
         }
@@ -174,16 +178,26 @@ export const orderPokemonsByType = (filterBy, array, order, origin) => {
                 if(pokemon.type?.some(type => type === filterBy)) 
                 newArray.push(pokemon)
             })
-            // if(origin === "api"){
-            //     let newArraytwo = []
-            //     newArraytwo = originPokemons(origin, newArray, order )
-            //     return newArraytwo
-            // }
-            // if(origin === "db"){
-            //     let newArraytwo = []
-            //     newArraytwo = originPokemons(origin, newArray, order )
-            //     return newArraytwo
-            // }
+                if(origin === "api"){
+                    let newArraytwo = []
+                    newArraytwo = originPokemons(origin, newArray, order )
+                    return newArraytwo
+                }
+                if(origin === "db"){
+                    let newArraytwo = []
+                    newArraytwo = originPokemons(origin, newArray, order )
+                    return newArraytwo
+                }
+                if(order === "a-z"){
+                    let newArraytwo = []
+                    newArraytwo = orderPokemons(order, newArray, order)
+                    return newArraytwo
+                }
+                if(order === "z-a"){
+                    let newArraytwo = []
+                    newArraytwo = orderPokemons(order, newArray, order)
+                    return newArraytwo
+                }
             return newArray
         }
         default:

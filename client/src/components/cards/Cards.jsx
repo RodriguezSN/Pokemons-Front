@@ -5,7 +5,6 @@ import Card from "../card/Card"
 const Cards = ({page, setPage}) => {
 
     const allPokemons = useSelector(state => state.allPokemons)
-    
     const dispatch = useDispatch() 
     const [loanding, setLoanding] = useState(true)
     useEffect(()=>{

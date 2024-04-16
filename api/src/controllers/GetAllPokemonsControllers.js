@@ -50,9 +50,27 @@ const getAllPokemonsControllers = async () => {
         }
     });
     // dataDb [pokemon{ dataValues:{} _proviusDataValues:{},..} pokemon {dataValues:{} _proviusDataValues:{},..}]
+    
     dataDb.map(pokemons => {
-        pokemonsDb.push(pokemons.dataValues)
+        let typesP = []
+        pokemons.dataValues.types.filter(type => typesP.push(type.dataValues?.name))
+     
+        const newPokemon = {
+            id: pokemons.dataValues.id,
+            name:pokemons.dataValues.name,
+            image: pokemons.dataValues.image,
+            hp: pokemons.dataValues.hp,
+            attack: pokemons.dataValues.attack,
+            defense: pokemons.dataValues.defense,
+            speed: pokemons.dataValues.speed,
+            height: pokemons.dataValues.height,
+            weight: pokemons.dataValues.weight,
+            type: typesP,
+            origin: pokemons.dataValues.origin
+        }
+        pokemonsDb.push(newPokemon)
     })
+
 
     return {pokemonsApi, pokemonsDb}
     

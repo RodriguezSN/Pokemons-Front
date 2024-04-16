@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, GET_ALL_POKEMONS_BY_ORDER, GET_ALL_POKEMONS_BY_ORIGIN, GET_ALL_TYPES, GET_POKEMONS_BY_TYPE, GET_POKEMON_BY_ID, GET_POKEMON_BY_NAME } from "./actions-types"
+import {  GET_ALL_POKEMONS, GET_ALL_POKEMONS_BY_ORDER, GET_ALL_POKEMONS_BY_ORIGIN, GET_ALL_TYPES, GET_POKEMONS_BY_TYPE, GET_POKEMON_BY_ID, GET_POKEMON_BY_NAME } from "./actions-types"
 import { orderPokemons, orderPokemonsByType, originPokemons } from "./utils"
 
 const initialState = {
@@ -7,7 +7,7 @@ const initialState = {
     pokemonById:[],
     selecOrder: "sin filtro",
     selecOrigin: "ambos",
-    selecType: "",
+    selecType: "sin filtro",
     allTypes:[],
     allTypesCopy:[],
 }
