@@ -22,7 +22,6 @@ const Detail = () => {
         axiosData()
     }, [dispatch])
 
-
     return (
         <div>
             <div>

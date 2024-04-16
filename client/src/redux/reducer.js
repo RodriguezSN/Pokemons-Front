@@ -1,10 +1,13 @@
 import { GET_ALL_POKEMONS, GET_ALL_POKEMONS_BY_ORDER, GET_ALL_POKEMONS_BY_ORIGIN, GET_ALL_TYPES, GET_POKEMONS_BY_TYPE, GET_POKEMON_BY_ID, GET_POKEMON_BY_NAME } from "./actions-types"
-import { filterPokemons, orderPokemons } from "./utils"
+import { orderPokemons, orderPokemonsByType, originPokemons } from "./utils"
 
 const initialState = {
     allPokemons: [],
     allPokemonsCopy: [],
-    pokemonById: [],
+    pokemonById:[],
+    selecOrder: "sin filtro",
+    selecOrigin: "ambos",
+    selecType: "",
     allTypes:[],
     allTypesCopy:[],
 }
@@ -36,17 +39,22 @@ const reducer = (state = initialState, action) => {
         case GET_ALL_POKEMONS_BY_ORIGIN:
             return {
                 ...state,
-                allPokemons: filterPokemons(action.payload, state.allPokemonsCopy)
+                allPokemons: originPokemons(action.payload, [...state.allPokemonsCopy], state.selecOrder, state.selecType),
+                selecOrigin: action.payload
             }
             
         case GET_ALL_POKEMONS_BY_ORDER:
             return{
                 ...state,
-                allPokemons: orderPokemons(action.payload, [...state.allPokemons])
+                allPokemons: orderPokemons(action.payload, [...state.allPokemonsCopy], state.selecOrigin, state.selecType),
+                selecOrder:  action.payload
+                
             }
         case GET_POKEMONS_BY_TYPE:
             return{
                 ...state,
+                allPokemons: orderPokemonsByType(action.payload, [...state.allPokemonsCopy], state.selecOrder, state.selecOrigin),
+                selecType: action.payload
             }
         default: {
             return {

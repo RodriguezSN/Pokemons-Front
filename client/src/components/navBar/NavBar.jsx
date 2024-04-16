@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import React,  { useEffect, useState } from "react"
-import { getAllPokemons, getAllTypes, getPokemonsName, pokemonByApiOrDb, pokemonsByOrder } from "../../redux/actions"
+import { getAllPokemons, getAllTypes, getPokemonsName, pokemonByApiOrDb, pokemonsByOrder, pokemonsByType } from "../../redux/actions"
 
 const NavBar = () => {
     const dispatch = useDispatch()
@@ -34,7 +34,10 @@ const NavBar = () => {
     const handleFiltrosOrden = ({target}) => {
         dispatch(pokemonsByOrder(target.value))
     }
-
+    
+    const handleFiltroType = ({target}) => {
+        dispatch(pokemonsByType(target.value))
+    }
     return (
         <div>
             <div className="divForms">
@@ -55,7 +58,7 @@ const NavBar = () => {
             </div>
             <div className="filtroTypes">
                 <label >Por types: </label>
-                <select name="filtro" id="filtro" defaultValue="sin filtro" >
+                <select name="filtro" id="filtro" defaultValue="sin filtro" onChange={handleFiltroType} >
                     <option value="sin filtro" key="sin filtro">Sin filtro</option>
                     {
                         allTypes.map( type => (
