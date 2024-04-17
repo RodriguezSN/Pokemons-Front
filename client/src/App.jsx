@@ -5,6 +5,7 @@ import Landing from './components/landing/Landing'
 import Home from "./components/home/Home"
 import Detail from "./components/detail/Detail"
 import Forms from "./components/forms/Forms"
+import NotFound from "./components/nofFound/NotFound"
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/home" element={<Home page={page} setPage={setPage}/>} />    
         <Route path="/detail/:id" element={<Detail />} />  
         <Route path="/form" element={<Forms />} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
     </div>
   )
