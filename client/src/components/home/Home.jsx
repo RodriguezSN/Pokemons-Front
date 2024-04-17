@@ -1,12 +1,12 @@
+import style from "./Home.module.css"
 import React, { useState } from "react"
 import Cards from "../cards/Cards"
 import NavBar from "../navBar/NavBar"
 
 const Home = ({page,setPage}) => {
     return (
-        <div>
+        <div className={style.divConteinerHome}>
             <NavBar />
-            <h1>Home</h1>
             <Cards page={page} setPage={setPage} />
         </div>
     )

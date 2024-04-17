@@ -1,0 +1,78 @@
+
+
+.divGeneralDesdeCards {
+    width: 1700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* grid-template-columns: "paginadoTop";
+    grid-template-rows: paginadoTop | "paginadoBelow"; */
+}
+/* .divCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+} */
+
+.divHijoCards {
+    display: flex;
+    background-color: rgba(7, 33, 29, 0.713);
+    width: 1500px;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.paginadoTop {
+    width: 1500px;
+    margin-top: 20px ;
+    margin-bottom: 20px;
+   
+}
+.paginadoTop span {
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    font-weight: 900;
+}
+.paginadoBelow span {
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    font-weight: 900;
+}
+.paginadoBelow {
+    width: 1500px;
+    margin-top: 20px ;
+    margin-bottom: 20px;
+}
+
+
+.paginadoBelow button {
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: large;
+    transition: box-shadow 0.3s ease;
+    &:hover{
+        background-color: rgba(101, 178, 230, 0.752);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.79);
+    }
+}
+
+.paginadoTop button {
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: large;
+    transition: box-shadow 0.3s ease;
+    &:hover{
+        background-color: rgba(101, 178, 230, 0.752);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.79);
+    }
+}

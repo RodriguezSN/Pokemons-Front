@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+.divGeneralDetail {
+    display: flex;
+    flex-direction:column;
+    background-image: url("./img/habitacionNocturna.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 1030px;
+}
+
+.divBack {
+    background-color: rgba(12, 82, 88, 0.812);
+    margin-top: 20px;
+    margin-left: 45%;
+    height: 100px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.divBack button {
+    width: 120px;
+    height: 60px;
+    font-size: 25px;
+    padding: 0px;
+    padding-bottom: 3px;
+    transition: box-shadow 0.7s ease;
+    &:hover{
+        background-color: rgba(69, 120, 154, 0.752);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.79);
+    }
+}
+
+.pokemonDetail {
+    background-color: rgba(12, 82, 88, 0.812);
+    margin: 100px;
+    margin-top: 50px;
+    height: 900px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.pokemonNameImg {
+    background-color: rgba(255, 0, 0, 0.378);
+    background-image: url("./img/pokedex.gif");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 40% 30%;
+    margin-left: 40px;
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Jersey 10", sans-serif;
+    font-size: x-large;
+    border-radius: 20px;
+}
+.pokemonNameImg h1 {
+    margin: 0;
+}
+.pokemonNameImg  img{
+    margin-bottom: 200px;
+    height: 300px;
+    width: 250px;
+}
+
+.pokemonDetalles {
+    background-color: rgba(165, 42, 42, 0.627);
+    height:  600px;
+    width: 500px;
+}
+
+.pokemonDetalles h2 {
+    font-size: 27px;
+    font-weight: 900;
+}
+
+.divTypeHijos {
+    margin: 5px;
+    font-size: x-large;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(73, 24, 24);
+} 
+
+.divTypePadre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}

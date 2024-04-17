@@ -1,0 +1,18 @@
+.divConteinerHome {
+    display: flex;
+    /* width: 100%; */
+    /* height: 100%; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: rgb(227, 97, 197); */
+    background-image: url("../card/img/bosque.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.h1Home {
+    background-color: antiquewhite;
+
+}

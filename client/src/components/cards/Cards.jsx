@@ -1,3 +1,4 @@
+import style from "./Cards.module.css"
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getAllPokemons } from "../../redux/actions"
@@ -10,6 +11,7 @@ const Cards = ({page, setPage}) => {
     useEffect(()=>{
         const axiosData = async () => {
             try {
+                setPage(1)
                 dispatch(getAllPokemons())
                 setLoanding(false)
             } catch (error) {
@@ -39,22 +41,22 @@ const Cards = ({page, setPage}) => {
         setPage(totalPages)
     }
      return (
-        <div>
-            <div className="paginado">
+        <div className={style.divGeneralDesdeCards}>
+            <div className={style.paginadoTop}>
                 <button onClick={goToFirsPage} disabled={page === 1}>◄◄</button>
                 <button onClick={prevPage} disabled={page === 1}>◄</button>
                 <span>{page}</span>
                 <button onClick={nextPage} disabled={endIndex >= allPokemons.length}>►</button>
                 <button onClick={goToLastPage} disabled={endIndex >= allPokemons.length}>►►</button>
             </div>
-            <h1>Cards</h1>
-            {
+            <div className={style.divCards}>
+           {
                 loanding ? (
                     <div> 
                         <img src="https://media.tenor.com/fSsxftCb8w0AAAAi/pikachu-running.gif" alt="" />
                     </div>
                 ) : (
-                    <div>
+                <div className={style.divHijoCards}>
                     {
                         allPokemons.length >= 0 ? (
                             allPokemons.slice(startIndex,endIndex).map( (pokemon, index) => (
@@ -67,8 +69,9 @@ const Cards = ({page, setPage}) => {
                     }
                 </div>
                 )
-             }    
-            <div className="paginado">
+             }   
+            </div> 
+            <div className={style.paginadoBelow}>
                 <button onClick={goToFirsPage} disabled={page === 1}>◄◄</button>
                 <button onClick={prevPage} disabled={page === 1}>◄</button>
                 <span>{page}</span>

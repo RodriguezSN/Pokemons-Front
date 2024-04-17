@@ -21,7 +21,7 @@ const Forms = () => {
         typeId:[],
         origin:"DB"
     })
-    
+
     const [errors, setErrors] = useState({
         name:"Nombra a tu Pokemon!!",
         image:"Foto de tu Pokemon!!",

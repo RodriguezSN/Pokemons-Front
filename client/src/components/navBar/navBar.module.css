@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+.divConteinerNav {
+    background-color: rgba(16, 70, 62, 0.897);
+    border-radius: 15px;
+    margin-top: 10px;
+    width: 1700px;
+    height: 120px;
+    /* padding-left: 35%;   */
+    /* padding-right: 25%;   */
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    
+}
+
+.divForms {
+    /* background-color: aquamarine; */
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.divForms p {
+    font-size: 30px;
+    font-family: "Jersey 10", sans-serif;
+    height: 7px;
+    color: black;
+}
+
+.divForms button {
+    font-size: large;
+    &:hover{
+        background-color: rgba(101, 230, 174, 0.752);
+    }
+}
+
+
+.searchName {
+    /* background-color: blueviolet; */
+    width: 650px;
+    padding: 20px;
+    display:  flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.searchName input {
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: large;
+    font-weight: 600;
+}
+
+.searchName button {
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    &:hover{
+        background-color: rgba(101, 230, 174, 0.752);
+    }
+}
+
+.divLogOut {
+    /* background-color: tomato; */
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divLogOut button {
+    font-size: large;
+    &:hover{
+        background-color: rgba(101, 230, 174, 0.752);
+    }
+}
+
+.filtros {
+    /* background-color: teal; */
+    font-size: 25px;
+    color: black;
+    font-family: "Jersey 10", sans-serif;
+    width: 350px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.filtroTypes {
+    /* background-color: skyblue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.filtros select {
+    margin-top: 5px;
+    height: 30px;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 25px;
+    border-radius: 4px;
+}
+
+.filtroAZ {
+    /* background-color: chartreuse; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.filtroDBoAPI {
+    /* background-color: darkgoldenrod; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

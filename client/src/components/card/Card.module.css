@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+.divConteinerCard {
+    background-color: rgb(89, 199, 186);
+    background-image: url("./img/pasto.png"),url("./img/nubeTransparente.png");
+    background-size: 150% 25%, 150% 70%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, top;
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+}
+.divConteinerCard h1 {
+    color: black;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 40px;
+    margin: 0px;
+    margin-top: 15px;
+}
+
+.divConteinerCard h3 {
+    color: black;
+    margin: 0px;
+}
+.divTypePadre {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.divTypeHijos {
+    margin: 0px;
+    width: 30px;
+    padding: 0px;
+    height: 25px;
+}
+.divConteinerCard label{
+    color: black;
+    font-size: larger;
+    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+    /* flex-flow: row wrap; */
+    align-items: center;
+    justify-content: center;
+}
+.divConteinerCard img {
+    margin-top: 10px;
+    max-height: 250px;
+    max-width: 200px;
+    /* width: 200px; */
+}
