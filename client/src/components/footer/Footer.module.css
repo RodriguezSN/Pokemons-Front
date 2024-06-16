@@ -1,0 +1,46 @@
+.divPadre {
+	/* background-color: rgba(80, 143, 199, 0.297); */
+	background-color: rgba(241, 191, 120, 0.638);
+	backdrop-filter: blur(10px); /* Aplicar desenfoque */
+	border-top: 3px solid black;
+	width: 100%;
+	height: 160px;
+	display: flex;
+	margin-top: 25px;
+}
+
+.divName {
+	width: 25%;
+	padding: 0%;
+	h2 {
+		display: inline-block;
+		font-size: 37px;
+	}
+}
+
+.divCopy {
+	width: 50%;
+	align-content: end;
+}
+
+.divEnlaces {
+	width: 25%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	button {
+		width: 80px;
+		height: 80px;
+		margin: 10px;
+		padding: 0;
+		background: rgba(255, 255, 255, 0.1); /* Color de fondo con transparencia */
+		backdrop-filter: blur(10px); /* Aplicar desenfoque */
+		background-color: rgba(255, 255, 255, 0.398);
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

@@ -34,6 +34,13 @@ export const getPokemonsName = (name) => {
     return async (dispatch) => {
         try {
             const {data} = await axios.get(`http://localhost:3001/pokemon/name/${name}`)
+            const {existeAPI, existeDB} = data
+            if(existeAPI && existeDB) {
+                const dataConcat = existeAPI.concat(existeDB)
+                return dispatch({
+                    type: GET_POKEMON_BY_NAME, payload: dataConcat
+                })
+            }
             return dispatch({
                 type: GET_POKEMON_BY_NAME, payload: data
             })

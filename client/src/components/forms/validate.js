@@ -60,7 +60,7 @@ export default function validate (input) {
             if(regexSimbolos.test(input.weight)) errors.weight = "No puede contener Simbolos"
         }
     //? TYPE
-    if(input.typeId.length === 0 || input.typeId.includes("")) errors.typeId = "Tu pokemon debe pertener a algun type vale?"
+    // if(input.typeId.length === 0 || input.typeId.includes("")) errors.typeId = "Tu pokemon debe pertener a algun type vale?"
     return errors
 }
 

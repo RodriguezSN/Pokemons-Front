@@ -1,121 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
 
 .divConteinerNav {
-    background-color: rgba(16, 70, 62, 0.897);
-    border-radius: 15px;
-    margin-top: 10px;
-    width: 1700px;
-    height: 120px;
-    /* padding-left: 35%;   */
-    /* padding-right: 25%;   */
-    display: flex;
-    flex-direction: row;
+	background-color: rgba(101, 41, 33, 0.972);
+	border-bottom: 5px solid black;
+	border-right: 3px solid black;
+	border-left: 3px solid black;
+	border-radius: 0px 0px 10px 10px;
+	width: 99.6%;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
 
-    justify-content: space-between;
-    
+	justify-content: center;
 }
-
+.divPokedex {
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	align-items: center;
+	justify-content: center;
+	/* background-color: red; */
+	/* font-size: ; */
+	padding: 5px 10px;
+	overflow: hidden;
+	box-sizing: border-box;
+	text-align: center;
+}
+.divPokedex h2 {
+	margin-top: 2%;
+	margin-bottom: 0px;
+	padding-top: 2%;
+	padding-bottom: 0px;
+}
 .divForms {
-    /* background-color: aquamarine; */
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    padding-top: 0px;
-    margin-top: 0px;
-}
-.divForms p {
-    font-size: 30px;
-    font-family: "Jersey 10", sans-serif;
-    height: 7px;
-    color: black;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	height: 100%;
 }
 
+.divForms a {
+	width: 80%;
+	height: 80%;
+}
 .divForms button {
-    font-size: large;
-    &:hover{
-        background-color: rgba(101, 230, 174, 0.752);
-    }
+	font-size: large;
+	height: 100%;
+	width: 100%;
+	font-weight: 900;
+	color: black;
+	font-size: x-large;
+	padding: 5px 10px;
+	overflow: hidden;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: rgba(241, 191, 120, 0.638);
+	&:hover {
+		background-color: rgba(101, 230, 174, 0.752);
+		color: black;
+		border: 4px solid rgba(8, 7, 7, 0.719);
+	}
+	border: 3px solid black;
+	border-radius: 35px;
 }
-
 
 .searchName {
-    /* background-color: blueviolet; */
-    width: 650px;
-    padding: 20px;
-    display:  flex;
-    align-items: center;
-    justify-content: space-evenly;
+	/* background-color: rgb(0, 255, 98); */
+	width: 550px;
+	/* padding: 20px; */
+	display: flex;
+	align-items: center;
+	/* justify-content: space-evenly; */
 }
 .searchName input {
-    width: 200px;
-    height: 30px;
-    border-radius: 15px;
-    font-size: large;
-    font-weight: 600;
+	width: 250px;
+	height: 40px;
+	border-radius: 15px;
+	padding-left: 3%;
+	font-size: large;
+	font-weight: 600;
+	background-color: rgba(167, 143, 109, 0.638);
+	color: black;
+	margin-right: 1%;
+}
+.searchName input::placeholder {
+	color: rgba(0, 0, 0, 0.813);
 }
 
-.searchName button {
-    width: 150px;
-    height: 50px;
-    border-radius: 20px;
-    &:hover{
-        background-color: rgba(101, 230, 174, 0.752);
-    }
+.buttonSearch {
+	width: 50px;
+	height: 40px;
+	border-radius: 20px;
+	margin-right: 3%;
+	font-size: xx-small;
+	font-weight: 900;
+	&:hover {
+		background-color: rgba(101, 230, 174, 0.752);
+	}
+}
+
+.buttonAll {
+	width: 150px;
+	height: 40px;
+	&:hover {
+		background-color: rgba(101, 230, 174, 0.752);
+	}
 }
 
 .divLogOut {
-    /* background-color: tomato; */
-    width: 160px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	/* background-color: red; */
+	width: 160px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .divLogOut button {
-    font-size: large;
-    &:hover{
-        background-color: rgba(101, 230, 174, 0.752);
-    }
-}
-
-.filtros {
-    /* background-color: teal; */
-    font-size: 25px;
-    color: black;
-    font-family: "Jersey 10", sans-serif;
-    width: 350px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.filtroTypes {
-    /* background-color: skyblue; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.filtros select {
-    margin-top: 5px;
-    height: 30px;
-    font-family: "Jersey 10", sans-serif;
-    font-size: 25px;
-    border-radius: 4px;
-}
-
-.filtroAZ {
-    /* background-color: chartreuse; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.filtroDBoAPI {
-    /* background-color: darkgoldenrod; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+	font-size: large;
+	height: 40px;
+	padding: 5px 10px;
+	overflow: hidden;
+	box-sizing: border-box;
+	text-align: center;
+	&:hover {
+		background-color: rgba(101, 230, 174, 0.752);
+	}
 }
