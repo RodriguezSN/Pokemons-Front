@@ -296,14 +296,12 @@ const Forms = () => {
 					</button>
 				</div>
 				<div className={style.divDetail}>
+					<h1 className={style.h1DivDetail}>{post.name}</h1>
 					<div className={style.divDetailInterno}>
 						<div className={style.divSup}>
 							<div className={style.divDetailImg}>
 								<img
-									src={
-										post.image ||
-										"https://i.pinimg.com/736x/fa/27/4f/fa274f5851eca6407a488b3f3d994ec6.jpg"
-									}
+									src={post.image || "../../public/pokebollGirando.png"}
 									alt={post.name}
 								/>
 							</div>

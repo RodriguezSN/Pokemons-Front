@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+
 .divPadre {
 	width: 100%;
 	height: 100vh;
@@ -159,12 +161,23 @@ form {
 	background-color: rgba(4, 255, 4, 0.297);
 	width: 60%;
 }
+.h1DivDetail {
+	position: absolute;
+	z-index: 9999;
+	margin-left: 4%;
+	margin-right: 1%;
+	font-family: "Jersey 10", sans-serif;
+	color: black;
+	font-size: 500%;
+	margin-top: 0px;
+	width: 50%;
+}
 
 .divDetailInterno {
 	/* height: 100vh; */
 	margin: 5%;
 	height: 88%;
-	border: 1px solid black;
+	border: 1px solid rgb(0, 0, 0);
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
@@ -176,15 +189,24 @@ form {
 	flex-direction: row;
 }
 .divDetailImg {
-	background-color: red;
+	background-color: rgba(255, 0, 0, 0.471);
 	width: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	img {
+		animation: rotar 5s linear infinite;
 		max-height: 98%;
 		max-width: 98%;
 		border-radius: 10px;
+	}
+}
+@keyframes rotar {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
 	}
 }
 .divDetailTypes {
