@@ -299,36 +299,36 @@ const Forms = () => {
 					<div className={style.divDetailInterno}>
 						<div className={style.divSup}>
 							<div className={style.divDetailImg}>
-								<img src={post.image} alt={post.name} />
+								<img
+									src={
+										post.image ||
+										"https://i.pinimg.com/736x/fa/27/4f/fa274f5851eca6407a488b3f3d994ec6.jpg"
+									}
+									alt={post.name}
+								/>
 							</div>
 							<div className={style.divDetailTypes}>
 								<h1>Type</h1>
 							</div>
 						</div>
-						<div className={style.divDetailProp}>
-							<div>
-								<h3>Name: {post.name}</h3>
+						<div className={style.divDetailProps}>
+							<div className={style.divDetailProp}>
+								<h3>HP: {post.hp}</h3>
 							</div>
-							<div>
-								<h3>Name: {post.name}</h3>
+							<div className={style.divDetailProp}>
+								<h3>Attack: {post.attack}</h3>
 							</div>
-							<div>
-								<h3>Name: {post.name}</h3>
+							<div className={style.divDetailProp}>
+								<h3>Defense: {post.defense}</h3>
 							</div>
-							<div>
-								<h3>Name: {post.name}</h3>
+							<div className={style.divDetailProp}>
+								<h3>Speed: {post.speed}</h3>
 							</div>
-							<div>
-								<h3>Name: {post.name}</h3>
+							<div className={style.divDetailProp}>
+								<h3>Height: {post.height}</h3>
 							</div>
-							<div>
-								<h3>Name: {post.name}</h3>
-							</div>
-							<div>
-								<h3>Name: {post.name}</h3>
-							</div>
-							<div>
-								<h3>Name: {post.name}</h3>
+							<div className={style.divDetailProp}>
+								<h3>weight: {post.weight}</h3>
 							</div>
 						</div>
 					</div>
