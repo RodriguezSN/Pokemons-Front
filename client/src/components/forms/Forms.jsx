@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import validate from "./validate";
 import style from "./Forms.module.css";
+import Cloudinary from "../Cloudinary/Cloudinary.jsx";
+
 const Forms = () => {
 	const navigate = useNavigate();
 	const allTypes = useSelector((state) => state.allTypes);
@@ -125,6 +127,7 @@ const Forms = () => {
 							</div>
 							<div className={style.divName}>
 								<div className={style.inputs}>
+									<Cloudinary />
 									<label htmlFor="image">Image: </label>
 									<input
 										type="text"
@@ -301,8 +304,19 @@ const Forms = () => {
 						<div className={style.divSup}>
 							<div className={style.divDetailImg}>
 								<img
-									src={post.image || "../../public/pokebollGirando.png"}
+									src={
+										post.image ||
+										"https://res.cloudinary.com/dwvdvzg1k/image/upload/v1724722529/necxkzdyexaet9fh7cal.png"
+									}
 									alt={post.name}
+									className={
+										post.image &&
+										post.image.includes(
+											"https://res.cloudinary.com/dwvdvzg1k/image/upload/v1724722529/necxkzdyexaet9fh7cal.png"
+										)
+											? style.rotarImg
+											: ""
+									}
 								/>
 							</div>
 							<div className={style.divDetailTypes}>
