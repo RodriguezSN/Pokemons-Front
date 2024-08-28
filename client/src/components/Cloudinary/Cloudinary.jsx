@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { getUrlImgForms } from "../../redux/actions";
 
 const Cloudinary = () => {
 	const preset_name = "lpwg5u66";
 	const cloud_name = "dwvdvzg1k";
+
+	const dispatch = useDispatch();
+	const handleUrl = (imgUrl) => {
+		dispatch(getUrlImgForms(imgUrl));
+	};
 
 	const [image, setImage] = useState("");
 	const [loading, setLoiding] = useState(false);
@@ -27,6 +34,7 @@ const Cloudinary = () => {
 
 			const file = await response.json();
 			setImage(file.secure_url);
+			handleUrl(file.secure_url);
 			setLoiding(false);
 		} catch (error) {
 			console.error("Error uploading image: ", error);
@@ -44,7 +52,7 @@ const Cloudinary = () => {
 				onChange={(e) => uploadImage(e)}
 			/>
 
-			{loading ? <h1>Loanding...</h1> : <img src={image} alt="imagen subida" />}
+			{/* {loading ? <h1>Loanding...</h1> : <img src={image} alt="imagen subida" />} */}
 		</div>
 	);
 };

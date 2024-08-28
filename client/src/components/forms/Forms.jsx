@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -9,10 +9,10 @@ import Cloudinary from "../Cloudinary/Cloudinary.jsx";
 const Forms = () => {
 	const navigate = useNavigate();
 	const allTypes = useSelector((state) => state.allTypes);
-
+	const urlImgForm = useSelector((state) => state.imgForms);
 	const [post, setPost] = useState({
 		name: "",
-		image: "",
+		image: urlImgForm,
 		hp: 0,
 		attack: 0,
 		defense: 0,
@@ -22,7 +22,9 @@ const Forms = () => {
 		typeId: [],
 		origin: "DB"
 	});
-
+	useEffect(() => {
+		setPost({ ...post, image: urlImgForm });
+	}, [urlImgForm]);
 	const [errors, setErrors] = useState({
 		name: "Nombra a tu Pokemon!!",
 		image: "Foto de tu Pokemon!!",
@@ -128,22 +130,16 @@ const Forms = () => {
 							<div className={style.divName}>
 								<div className={style.inputs}>
 									<label htmlFor="image">Image: </label>
-									<input
-										type="text"
-										placeholder="image"
-										name="image"
-										id="image"
-										onChange={handleChange}
-									/>
+									<div className={style.cloudinary}>
+										<Cloudinary />
+									</div>
 								</div>
-								<div className={style.cloudinary}>
-									<Cloudinary />
-								</div>
-								<div className={style.error}>
+
+								{/* <div className={style.error}>
 									<p style={{ color: "coral" }}>
 										{errors.image ? errors.image : null}
 									</p>
-								</div>
+								</div> */}
 							</div>
 							<div className={style.divName}>
 								<div className={style.inputs}>
@@ -280,42 +276,38 @@ const Forms = () => {
 								))}
 							</div>
 						</div>
+						<div className={style.buttonSubmit}>
+							<button
+								type="submit"
+								disabled={
+									errors.name ||
+									errors.image ||
+									errors.hp ||
+									errors.attack ||
+									errors.defense ||
+									errors.speed ||
+									errors.height ||
+									errors.weight ||
+									errors.typeId
+								}
+							>
+								Create
+							</button>
+						</div>
 					</form>
 				</div>
-				<div className={style.buttonSubmit}>
-					<button
-						type="submit"
-						disabled={
-							errors.name ||
-							errors.image ||
-							errors.hp ||
-							errors.attack ||
-							errors.defense ||
-							errors.speed ||
-							errors.height ||
-							errors.weight ||
-							errors.typeId
-						}
-					>
-						Create
-					</button>
-				</div>
+
 				<div className={style.divDetail}>
 					<h1 className={style.h1DivDetail}>{post.name}</h1>
 					<div className={style.divDetailInterno}>
 						<div className={style.divSup}>
 							<div className={style.divDetailImg}>
 								<img
-									src={
-										post.image ||
-										"https://res.cloudinary.com/dwvdvzg1k/image/upload/v1724722529/necxkzdyexaet9fh7cal.png"
-									}
+									src={post.image}
 									alt={post.name}
 									className={
-										post.image &&
-										post.image.includes(
-											"https://res.cloudinary.com/dwvdvzg1k/image/upload/v1724722529/necxkzdyexaet9fh7cal.png"
-										)
+										post.image ==
+										"https://res.cloudinary.com/dwvdvzg1k/image/upload/v1724722529/necxkzdyexaet9fh7cal.png"
 											? style.rotarImg
 											: ""
 									}

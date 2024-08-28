@@ -1,73 +1,100 @@
-import {  GET_ALL_POKEMONS, GET_ALL_POKEMONS_BY_ORDER, GET_ALL_POKEMONS_BY_ORIGIN, GET_ALL_TYPES, GET_POKEMONS_BY_TYPE, GET_POKEMON_BY_ID, GET_POKEMON_BY_NAME } from "./actions-types"
-import { orderPokemons, orderPokemonsByType, originPokemons } from "./utils"
+import {
+	GET_ALL_POKEMONS,
+	GET_ALL_POKEMONS_BY_ORDER,
+	GET_ALL_POKEMONS_BY_ORIGIN,
+	GET_ALL_TYPES,
+	GET_POKEMONS_BY_TYPE,
+	GET_POKEMON_BY_ID,
+	GET_POKEMON_BY_NAME,
+	GET_URL_IMG_FORMS
+} from "./actions-types";
+import { orderPokemons, orderPokemonsByType, originPokemons } from "./utils";
 
 const initialState = {
-    allPokemons: [],
-    allPokemonsCopy: [],
-    pokemonById:[],
-    selecOrder: "sin filtro",
-    selecOrigin: "ambos",
-    selecType: "sin filtro",
-    allTypes:[],
-    allTypesCopy:[],
-}
+	allPokemons: [],
+	allPokemonsCopy: [],
+	pokemonById: [],
+	selecOrder: "sin filtro",
+	selecOrigin: "ambos",
+	selecType: "sin filtro",
+	allTypes: [],
+	allTypesCopy: [],
+	imgForms:
+		"https://res.cloudinary.com/dwvdvzg1k/image/upload/v1724722529/necxkzdyexaet9fh7cal.png"
+};
 
 const reducer = (state = initialState, action) => {
-    switch(action.type) {
-        case GET_ALL_POKEMONS:
-            return {
-                ...state,
-                allPokemons: action.payload,
-                allPokemonsCopy: [...action.payload]
-            }
-        case GET_ALL_TYPES:
-            return {
-                ...state,
-                allTypes: action.payload,
-                allTypesCopy: action.payload
-            }
-        case GET_POKEMON_BY_NAME: 
-            return {
-                ...state,
-                allPokemons: action.payload 
-            }
-        case GET_POKEMON_BY_ID:
-            return {
-                ...state,
-                pokemonById: action.payload
-            }
-        case GET_ALL_POKEMONS_BY_ORIGIN:
-            return {
-                ...state,
-                allPokemons: originPokemons(action.payload, [...state.allPokemonsCopy], state.selecOrder, state.selecType),
-                selecOrigin: action.payload
-            }
-            
-        case GET_ALL_POKEMONS_BY_ORDER:
-            return{
-                ...state,
-                allPokemons: orderPokemons(action.payload, [...state.allPokemonsCopy], state.selecOrigin, state.selecType),
-                selecOrder:  action.payload
-                
-            }
-        case GET_POKEMONS_BY_TYPE:
-            return{
-                ...state,
-                allPokemons: orderPokemonsByType(action.payload, [...state.allPokemonsCopy], state.selecOrder, state.selecOrigin),
-                selecType: action.payload
-            }
-        default: {
-            return {
-                ...state,
-            }
-        }
-    }
-}
+	switch (action.type) {
+		case GET_ALL_POKEMONS:
+			return {
+				...state,
+				allPokemons: action.payload,
+				allPokemonsCopy: [...action.payload]
+			};
+		case GET_ALL_TYPES:
+			return {
+				...state,
+				allTypes: action.payload,
+				allTypesCopy: action.payload
+			};
+		case GET_POKEMON_BY_NAME:
+			return {
+				...state,
+				allPokemons: action.payload
+			};
+		case GET_POKEMON_BY_ID:
+			return {
+				...state,
+				pokemonById: action.payload
+			};
+		case GET_ALL_POKEMONS_BY_ORIGIN:
+			return {
+				...state,
+				allPokemons: originPokemons(
+					action.payload,
+					[...state.allPokemonsCopy],
+					state.selecOrder,
+					state.selecType
+				),
+				selecOrigin: action.payload
+			};
 
-export default reducer
+		case GET_ALL_POKEMONS_BY_ORDER:
+			return {
+				...state,
+				allPokemons: orderPokemons(
+					action.payload,
+					[...state.allPokemonsCopy],
+					state.selecOrigin,
+					state.selecType
+				),
+				selecOrder: action.payload
+			};
+		case GET_POKEMONS_BY_TYPE:
+			return {
+				...state,
+				allPokemons: orderPokemonsByType(
+					action.payload,
+					[...state.allPokemonsCopy],
+					state.selecOrder,
+					state.selecOrigin
+				),
+				selecType: action.payload
+			};
+		case GET_URL_IMG_FORMS:
+			return {
+				...state,
+				imgForms: action.payload
+			};
+		default: {
+			return {
+				...state
+			};
+		}
+	}
+};
 
-
-
+export default reducer;
 
 //* ORIGIN
 
