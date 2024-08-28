@@ -36,7 +36,7 @@ const Cloudinary = () => {
 
 	return (
 		<div>
-			<h1>Cargar imagen</h1>
+			{/* <h1>Cargar imagen</h1> */}
 			<input
 				type="file"
 				name="file"

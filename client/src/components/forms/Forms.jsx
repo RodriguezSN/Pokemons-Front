@@ -127,7 +127,6 @@ const Forms = () => {
 							</div>
 							<div className={style.divName}>
 								<div className={style.inputs}>
-									<Cloudinary />
 									<label htmlFor="image">Image: </label>
 									<input
 										type="text"
@@ -136,6 +135,9 @@ const Forms = () => {
 										id="image"
 										onChange={handleChange}
 									/>
+								</div>
+								<div className={style.cloudinary}>
+									<Cloudinary />
 								</div>
 								<div className={style.error}>
 									<p style={{ color: "coral" }}>

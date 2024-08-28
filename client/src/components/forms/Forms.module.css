@@ -182,6 +182,11 @@ form {
 	display: flex;
 	flex-direction: column;
 }
+.cloudinary {
+	display: flex;
+	background-color: rebeccapurple;
+	width: 50%;
+}
 .divSup {
 	width: 100%;
 	height: 60%;
