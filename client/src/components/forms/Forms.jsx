@@ -88,7 +88,7 @@ const Forms = () => {
 		<div className={style.divPadre}>
 			<div className={style.divCabeza}>
 				<div className={style.divTittle}>
-					<h1>Formulario</h1>
+					<h1>Create your favorite pokemon!!</h1>
 				</div>
 				<div className={style.divBack}>
 					<Link to="/home">
