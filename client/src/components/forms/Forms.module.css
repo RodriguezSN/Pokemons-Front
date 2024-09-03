@@ -202,7 +202,7 @@ form {
 }
 .divSup {
 	width: 100%;
-	height: 60%;
+	height: 70%;
 	display: flex;
 	flex-direction: row;
 }
@@ -249,10 +249,53 @@ form {
 .divDetailTypes {
 	background-color: black;
 	width: 50%;
+	display: flex;
+	/* flex-direction: column; */
+	flex-flow: row wrap;
+	/* justify-content: space-evenly; */
+}
+.supDivDetailTypes {
+	background-color: violet;
+	width: 100%;
+	height: 15%;
+	display: flex;
+	justify-content: center;
+	h1 {
+		background-color: wheat;
+		width: max-content;
+		margin-top: 0;
+		padding: 0;
+	}
+}
+.infeDivDetailTypes {
+	background-color: blue;
+	height: 85%;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+.divTypeH3Img {
+	display: flex;
+	flex-direction: row;
+	width: 30%;
+	height: 13%;
+	background-color: red;
+	justify-content: space-evenly;
+	align-items: center;
+	h3 {
+		margin: 0;
+		padding: 0;
+		width: 50%;
+	}
+	img {
+		width: 30%;
+		height: 100%;
+	}
 }
 .divDetailProps {
 	width: 100%;
-	height: 40%;
+	height: 30%;
 	background-color: rebeccapurple;
 	display: flex;
 	/* flex-direction: row; */
@@ -263,6 +306,12 @@ form {
 
 .divDetailProp {
 	background-color: brown;
+	display: flex;
+	justify-content: center;
 	width: 50%;
-	height: 20%;
+	height: 50%;
+	h3 {
+		background-color: blue;
+		width: 50%;
+	}
 }

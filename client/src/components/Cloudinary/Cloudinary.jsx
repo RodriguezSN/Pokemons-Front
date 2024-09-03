@@ -6,6 +6,8 @@ import style from "./Cloudinary.module.css";
 const Cloudinary = () => {
 	const preset_name = "lpwg5u66";
 	const cloud_name = "dwvdvzg1k";
+	// const preset_name = "dasdmka";
+	// const cloud_name = "didoessvf";
 
 	const dispatch = useDispatch();
 	const handleUrl = (imgUrl) => {

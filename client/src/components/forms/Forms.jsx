@@ -106,11 +106,11 @@ const Forms = () => {
 		},
 		{
 			value: "fairy",
-			url: ""
+			url: "https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725389158/lvcavl4c7z4y3vrlxa5b.png"
 		},
 		{
 			value: "unknown",
-			url: ""
+			url: "	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725389250/nqy7lbhwgejh147pdfyi.png"
 		},
 		{
 			value: "shadow",
@@ -395,17 +395,17 @@ const Forms = () => {
 								/>
 							</div>
 							<div className={style.divDetailTypes}>
-								<h1>Type</h1>
-								{post.typeId.map((type) => (
-									<div key={type}>
-										<h3>{allTypes[type - 1].name}</h3>
-										<img
-											src={imgTypePokemon[type - 1].url}
-											alt=""
-											width="15%"
-										/>
-									</div>
-								))}
+								<div className={style.supDivDetailTypes}>
+									<h1>Type</h1>
+								</div>
+								<div className={style.infeDivDetailTypes}>
+									{post.typeId.map((type) => (
+										<div className={style.divTypeH3Img} key={type}>
+											<img src={imgTypePokemon[type - 1].url} alt="" />
+											<h3>{allTypes[type - 1].name}</h3>
+										</div>
+									))}
+								</div>
 							</div>
 						</div>
 						<div className={style.divDetailProps}>
