@@ -35,7 +35,88 @@ const Forms = () => {
 		height: "Cual es su altura?",
 		weight: "Cuanto pesa tu pokemon?"
 	});
-
+	const imgTypePokemon = [
+		{
+			value: "normal",
+			url: "https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321385/dl6qie7b7lbaclsx5sc7.png"
+		},
+		{
+			value: "fighting",
+			url: "	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321515/tszcp34fdhtaix12pbbg.png"
+		},
+		{
+			value: "flying",
+			url: "https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321307/gg42oohvpl0q0xrwmlqn.png"
+		},
+		{
+			value: "poison",
+			url: "	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321448/q7w1ye2hvxwhbtpgubfk.png"
+		},
+		{
+			value: "ground",
+			url: "https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321482/lc8jcgo83cv9bocqravb.png"
+		},
+		{
+			value: "rock",
+			url: "	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321204/ttafqr2eiozfx5x0phbe.png"
+		},
+		{
+			value: "bug",
+			url: "https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321408/lpdx6vdtqolrwzb7naua.png"
+		},
+		{
+			value: "ghost",
+			url: "https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321265/zlm7gms45lyg4km9y1lz.png"
+		},
+		{
+			value: "steel",
+			url: "	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321580/vevhucccha20mpw2apih.png"
+		},
+		{
+			value: "fire",
+			url: "https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725319176/wxyujjgx4z2uhce0gqxk.png"
+		},
+		{
+			value: "water",
+			url: "	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725319227/qilyoonhz5dg5jiadq4o.png"
+		},
+		{
+			value: "grass",
+			url: "	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321239/xfdecmrfmxcgsqu7jo4d.png"
+		},
+		{
+			value: "electric",
+			url: "https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725311244/jhjce9oh0vihdss63exf.png"
+		},
+		{
+			value: "psychic",
+			url: "https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321459/nthohhof4lbw1fd7i5le.png"
+		},
+		{
+			value: "ice",
+			url: "https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321331/lifgtlmlyxdjkvml5vqx.png"
+		},
+		{
+			value: "dragon",
+			url: "https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321366/jana6mpldajixl6zfapg.png"
+		},
+		{
+			value: "dark",
+			url: "https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321543/bct37qceeqwkcrvqyyzt.png"
+		},
+		{
+			value: "fairy",
+			url: ""
+		},
+		{
+			value: "unknown",
+			url: ""
+		},
+		{
+			value: "shadow",
+			url: "https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725321691/dudkt8y8azs5bpremzuf.png"
+		}
+	];
 	const handleChange = (event) => {
 		const { name, value } = event.target;
 
@@ -119,6 +200,7 @@ const Forms = () => {
 										name="name"
 										id="name"
 										onChange={handleChange}
+										maxLength="20"
 									/>
 								</div>
 								<div className={style.error}>
@@ -130,9 +212,8 @@ const Forms = () => {
 							<div className={style.divName}>
 								<div className={style.inputs}>
 									<label htmlFor="image">Image: </label>
-									<div className={style.cloudinary}>
-										<Cloudinary />
-									</div>
+									<Cloudinary />
+									{/* <div className={style.cloudinary}></div> */}
 								</div>
 
 								{/* <div className={style.error}>
@@ -315,6 +396,16 @@ const Forms = () => {
 							</div>
 							<div className={style.divDetailTypes}>
 								<h1>Type</h1>
+								{post.typeId.map((type) => (
+									<div key={type}>
+										<h3>{allTypes[type - 1].name}</h3>
+										<img
+											src={imgTypePokemon[type - 1].url}
+											alt=""
+											width="15%"
+										/>
+									</div>
+								))}
 							</div>
 						</div>
 						<div className={style.divDetailProps}>
