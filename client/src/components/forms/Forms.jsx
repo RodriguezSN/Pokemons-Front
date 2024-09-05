@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import validate from "./validate";
 import style from "./Forms.module.css";
 import Cloudinary from "../Cloudinary/Cloudinary.jsx";
+import { color } from "@cloudinary/url-gen/qualifiers/background";
 
 const Forms = () => {
 	const navigate = useNavigate();
@@ -282,6 +283,7 @@ const Forms = () => {
 										name="speed"
 										id="speed"
 										onChange={handleChange}
+										maxLength="4"
 									/>
 								</div>
 								<div className={style.error}>
@@ -396,7 +398,7 @@ const Forms = () => {
 							</div>
 							<div className={style.divDetailTypes}>
 								<div className={style.supDivDetailTypes}>
-									<h1>Type</h1>
+									<h1>types</h1>
 								</div>
 								<div className={style.infeDivDetailTypes}>
 									{post.typeId.map((type) => (
@@ -410,22 +412,34 @@ const Forms = () => {
 						</div>
 						<div className={style.divDetailProps}>
 							<div className={style.divDetailProp}>
-								<h3>HP: {post.hp}</h3>
+								<h3 style={{ color: post.hp.length > 4 ? "red" : "" }}>
+									HP: {post.hp}
+								</h3>
 							</div>
 							<div className={style.divDetailProp}>
-								<h3>Attack: {post.attack}</h3>
+								<h3 style={{ color: post.attack.length > 4 ? "red" : "" }}>
+									Attack: {post.attack}
+								</h3>
 							</div>
 							<div className={style.divDetailProp}>
-								<h3>Defense: {post.defense}</h3>
+								<h3 style={{ color: post.defense.length > 4 ? "red" : "" }}>
+									Defense: {post.defense}
+								</h3>
 							</div>
 							<div className={style.divDetailProp}>
-								<h3>Speed: {post.speed}</h3>
+								<h3 style={{ color: post.speed.length > 4 ? "red" : "" }}>
+									Speed: {post.speed}
+								</h3>
 							</div>
 							<div className={style.divDetailProp}>
-								<h3>Height: {post.height}</h3>
+								<h3 style={{ color: post.height.length > 4 ? "red" : "" }}>
+									Height: {post.height}
+								</h3>
 							</div>
 							<div className={style.divDetailProp}>
-								<h3>weight: {post.weight}</h3>
+								<h3 style={{ color: post.weight.length > 4 ? "red" : "" }}>
+									weight: {post.weight}
+								</h3>
 							</div>
 						</div>
 					</div>
