@@ -1,55 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
 .divConteinerNotFound {
-    background-color: rgb(18, 24, 24);
-    height: 1030px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   
+	background-color: rgb(18, 24, 24);
+	height: 1030px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .divConteinerNotFound h4 {
-    font-size: 50px;
-    margin: 0px;
-    font-family: "Cinzel", serif;
+	font-size: 50px;
+	margin: 0px;
+	font-family: "Cinzel", serif;
 }
 .divH1 {
-    margin: 50px;
+	margin: 50px;
 }
 .divH1 h1 {
-    margin: 0px;
-    font-family: "Cinzel", serif;
-    font-size: 100px;
+	margin: 0px;
+	font-family: "Cinzel", serif;
+	font-size: 100px;
 }
 
 .divButton {
-    height: 200px;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	height: 200px;
+	width: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .divButton button {
-    height: 100px;
-    width: 150px;
-    border-radius: 15px;
-    font-size: 17px;
-    font-weight: 600;
-    font-family: "Cinzel", serif;
-    transition: box-shadow 0.3s ease;
-    &:hover{
-        background-color: rgba(217, 102, 60, 0.752);
-        box-shadow: 0 0 20px rgba(251, 251, 251, 0.79);
-    }
+	height: 100px;
+	width: 150px;
+	border-radius: 15px;
+	font-size: 17px;
+	font-weight: 600;
+	font-family: "Cinzel", serif;
+	transition: box-shadow 0.3s ease;
+	&:hover {
+		background-color: rgba(217, 102, 60, 0.752);
+		box-shadow: 0 0 20px rgba(251, 251, 251, 0.79);
+	}
 }
 
 .divImg {
-    background-image: url("./img/avatarsRun.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 80% 80%;
-    width: 400px;
-    height: 400px;
+	background-image: url("https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725922517/wfy63cbgvm5oyuxhimm8.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 80% 80%;
+	width: 400px;
+	height: 400px;
 }

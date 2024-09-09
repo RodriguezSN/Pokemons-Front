@@ -2,7 +2,8 @@
 
 .divConteinerCard {
 	background-color: rgb(89, 199, 186);
-	background-image: url("./img/pasto.png"), url("./img/nubeTransparente.png");
+	background-image: url("https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725922365/aeyeguzyv5t5vpthjtsz.png"),
+		url("	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725922385/kdka1wb0bek65aysdden.png");
 	background-size: 150% 25%, 150% 70%;
 	background-repeat: no-repeat, no-repeat;
 	background-position: bottom, top;

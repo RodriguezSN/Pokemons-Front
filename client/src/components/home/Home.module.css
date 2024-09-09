@@ -1,15 +1,14 @@
 .divConteinerHome {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    background-image: url("../card/img/bosque.gif");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-image: url("https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725922329/lzsddnbg6dcg1i7lkdnu.gif");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
 }
 
 .h1Home {
-    background-color: antiquewhite;
-
+	background-color: antiquewhite;
 }
