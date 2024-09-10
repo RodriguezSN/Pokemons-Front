@@ -43,7 +43,7 @@
 	flex-direction: row;
 	width: 100%;
 	height: 87%;
-	background-color: rgba(238, 130, 130, 0.409);
+	background-image: url("https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725922067/qxv2tqht7qdezxkq1qbg.gif");
 }
 .divForm {
 	display: flex;
@@ -217,6 +217,8 @@ form {
 }
 .divDetailImg {
 	background-image: url("https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725566578/x23qnpfg9jltshlrqluc.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: 50%;
 	display: flex;
 	align-items: center;
@@ -308,6 +310,7 @@ form {
 	}
 }
 .divDetailProps {
+	background-image: url("https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725935334/jzberu8aemb1yt3jxn9u.png");
 	border-top: 1.5vh ridge rgb(153, 34, 34);
 	width: 100%;
 	height: 28%;
