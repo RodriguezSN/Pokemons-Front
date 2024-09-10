@@ -361,6 +361,7 @@ const Forms = () => {
 						</div>
 						<div className={style.buttonSubmit}>
 							<button
+								id="buttonSubmit"
 								type="submit"
 								disabled={
 									errors.name ||
@@ -376,6 +377,7 @@ const Forms = () => {
 							>
 								Create
 							</button>
+							<script src="./script.js"></script>
 						</div>
 					</form>
 				</div>
