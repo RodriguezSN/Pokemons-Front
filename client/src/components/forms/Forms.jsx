@@ -189,197 +189,192 @@ const Forms = () => {
 				</div>
 			</div>
 			<div className={style.divBody}>
-				<div className={style.divForm}>
-					<form onSubmit={handleSummit}>
-						<div className={style.divEx}>
-							<div className={style.divName}>
-								<div className={style.inputs}>
-									<label htmlFor="name">Name: </label>
-									<input
-										type="text"
-										placeholder="name"
-										name="name"
-										id="name"
-										onChange={handleChange}
-										maxLength="20"
-									/>
-								</div>
-								<div className={style.error}>
-									<p style={{ color: "coral" }}>
-										{errors.name ? errors.name : null}
-									</p>
-								</div>
-							</div>
-							<div className={style.divName}>
-								<div className={style.inputs}>
-									<label htmlFor="image">Image: </label>
-									<Cloudinary />
-									{/* <div className={style.cloudinary}></div> */}
-								</div>
-
-								{/* <div className={style.error}>
-									<p style={{ color: "coral" }}>
-										{errors.image ? errors.image : null}
-									</p>
-								</div> */}
-							</div>
-							<div className={style.divName}>
-								<div className={style.inputs}>
-									<label htmlFor="hp">HP: </label>
-									<input
-										type="number"
-										placeholder="hp"
-										name="hp"
-										id="hp"
-										onChange={handleChange}
-									/>
-								</div>
-								<div className={style.error}>
-									<p style={{ color: "coral" }}>
-										{errors.hp ? errors.hp : null}
-									</p>
-								</div>
-							</div>
-							<div className={style.divName}>
-								<div className={style.inputs}>
-									<label htmlFor="attack">Attack: </label>
-									<input
-										type="number"
-										placeholder="attack"
-										name="attack"
-										id="attack"
-										onChange={handleChange}
-									/>
-								</div>
-								<div className={style.error}>
-									<p style={{ color: "coral" }}>
-										{errors.attack ? errors.attack : null}
-									</p>
-								</div>
-							</div>
-							<div className={style.divName}>
-								<div className={style.inputs}>
-									<label htmlFor="defense">Defense: </label>
-									<input
-										type="number"
-										placeholder="defense"
-										name="defense"
-										id="defense"
-										onChange={handleChange}
-									/>
-								</div>
-								<div className={style.error}>
-									<p style={{ color: "coral" }}>
-										{errors.defense ? errors.defense : null}
-									</p>
-								</div>
-							</div>
-							<div className={style.divName}>
-								<div className={style.inputs}>
-									<label htmlFor="speed">Speed: </label>
-									<input
-										type="number"
-										placeholder="speed"
-										name="speed"
-										id="speed"
-										onChange={handleChange}
-										maxLength="4"
-									/>
-								</div>
-								<div className={style.error}>
-									<p style={{ color: "coral" }}>
-										{errors.speed ? errors.speed : null}
-									</p>
-								</div>
-							</div>
-							<div className={style.divName}>
-								<div className={style.inputs}>
-									<label htmlFor="height">Height: </label>
-									<input
-										type="number"
-										placeholder="height"
-										name="height"
-										id="height"
-										onChange={handleChange}
-									/>
-								</div>
-								<div className={style.error}>
-									<p style={{ color: "coral" }}>
-										{errors.height ? errors.height : null}
-									</p>
-								</div>
-							</div>
-							<div className={style.divName}>
-								<div className={style.inputs}>
-									<label htmlFor="weight">Weight: </label>
-									<input
-										type="number"
-										placeholder="weight"
-										name="weight"
-										id="weight"
-										onChange={handleChange}
-									/>
-								</div>
-								<div className={style.error}>
-									<p style={{ color: "coral" }}>
-										{errors.weight ? errors.weight : null}
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className={style.divTypesSelect}>
-							<div className={style.formsSelect}>
-								<select
-									name="type"
-									id="type"
-									value=""
-									onChange={handleSelector}
-								>
-									<option value="" disabled hidden>
-										--
-									</option>
-
-									{allTypes.map((type) => (
-										<option key={type.id} value={type.id}>
-											{type.name}
-										</option>
-									))}
-								</select>
-								<p style={{ color: "coral" }}>
-									{post.typeId.length === 0 ? errors.typeId : null}
-								</p>
-							</div>
-							<div className={style.typesSelect}>
-								{post.typeId.map((type) => (
-									<div className={style.typesButton} key={type}>
-										<button onClick={() => handleDeleteType(event, type)}>
-											{allTypes[type - 1].name}
-										</button>
+				<div className={style.divPadreForm}>
+					<div className={style.divForm}>
+						<form onSubmit={handleSummit}>
+							<div className={style.divEx}>
+								<div className={style.divNameT}>
+									<div className={style.inputs}>
+										<label htmlFor="name">Name: </label>
+										<input
+											type="text"
+											placeholder="name"
+											name="name"
+											id="name"
+											onChange={handleChange}
+											maxLength="20"
+										/>
 									</div>
-								))}
+									<div className={style.error}>
+										<p style={{ color: "coral" }}>
+											{errors.name ? errors.name : null}
+										</p>
+									</div>
+								</div>
+								<div className={style.divName}>
+									<div className={style.inputs}>
+										<label htmlFor="image">Image: </label>
+										<Cloudinary />
+									</div>
+								</div>
+								<div className={style.divName}>
+									<div className={style.inputs}>
+										<label htmlFor="hp">HP: </label>
+										<input
+											type="number"
+											placeholder="hp"
+											name="hp"
+											id="hp"
+											onChange={handleChange}
+										/>
+									</div>
+									<div className={style.error}>
+										<p style={{ color: "coral" }}>
+											{errors.hp ? errors.hp : null}
+										</p>
+									</div>
+								</div>
+								<div className={style.divName}>
+									<div className={style.inputs}>
+										<label htmlFor="attack">Attack: </label>
+										<input
+											type="number"
+											placeholder="attack"
+											name="attack"
+											id="attack"
+											onChange={handleChange}
+										/>
+									</div>
+									<div className={style.error}>
+										<p style={{ color: "coral" }}>
+											{errors.attack ? errors.attack : null}
+										</p>
+									</div>
+								</div>
+								<div className={style.divName}>
+									<div className={style.inputs}>
+										<label htmlFor="defense">Defense: </label>
+										<input
+											type="number"
+											placeholder="defense"
+											name="defense"
+											id="defense"
+											onChange={handleChange}
+										/>
+									</div>
+									<div className={style.error}>
+										<p style={{ color: "coral" }}>
+											{errors.defense ? errors.defense : null}
+										</p>
+									</div>
+								</div>
+								<div className={style.divName}>
+									<div className={style.inputs}>
+										<label htmlFor="speed">Speed: </label>
+										<input
+											type="number"
+											placeholder="speed"
+											name="speed"
+											id="speed"
+											onChange={handleChange}
+											maxLength="4"
+										/>
+									</div>
+									<div className={style.error}>
+										<p style={{ color: "coral" }}>
+											{errors.speed ? errors.speed : null}
+										</p>
+									</div>
+								</div>
+								<div className={style.divName}>
+									<div className={style.inputs}>
+										<label htmlFor="height">Height: </label>
+										<input
+											type="number"
+											placeholder="height"
+											name="height"
+											id="height"
+											onChange={handleChange}
+										/>
+									</div>
+									<div className={style.error}>
+										<p style={{ color: "coral" }}>
+											{errors.height ? errors.height : null}
+										</p>
+									</div>
+								</div>
+								<div className={style.divNameB}>
+									<div className={style.inputs}>
+										<label htmlFor="weight">Weight: </label>
+										<input
+											type="number"
+											placeholder="weight"
+											name="weight"
+											id="weight"
+											onChange={handleChange}
+										/>
+									</div>
+									<div className={style.error}>
+										<p style={{ color: "coral" }}>
+											{errors.weight ? errors.weight : null}
+										</p>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div className={style.buttonSubmit}>
-							<button
-								id="buttonSubmit"
-								type="submit"
-								disabled={
-									errors.name ||
-									errors.image ||
-									errors.hp ||
-									errors.attack ||
-									errors.defense ||
-									errors.speed ||
-									errors.height ||
-									errors.weight ||
-									errors.typeId
-								}
-							>
-								Create
-							</button>
-							<script src="./script.js"></script>
-						</div>
-					</form>
+							<div className={style.divTypesSelect}>
+								<div className={style.formsSelect}>
+									<select
+										name="type"
+										id="type"
+										value=""
+										onChange={handleSelector}
+									>
+										<option value="" disabled hidden>
+											--
+										</option>
+
+										{allTypes.map((type) => (
+											<option key={type.id} value={type.id}>
+												{type.name}
+											</option>
+										))}
+									</select>
+									<p style={{ color: "coral" }}>
+										{post.typeId.length === 0 ? errors.typeId : null}
+									</p>
+								</div>
+								<div className={style.typesSelect}>
+									{post.typeId.map((type) => (
+										<div className={style.typesButton} key={type}>
+											<button onClick={() => handleDeleteType(event, type)}>
+												{allTypes[type - 1].name}
+											</button>
+										</div>
+									))}
+								</div>
+							</div>
+							<div className={style.buttonSubmit}>
+								<button
+									id="buttonSubmit"
+									type="submit"
+									disabled={
+										errors.name ||
+										errors.image ||
+										errors.hp ||
+										errors.attack ||
+										errors.defense ||
+										errors.speed ||
+										errors.height ||
+										errors.weight ||
+										errors.typeId
+									}
+								>
+									Create
+								</button>
+								<script src="./script.js"></script>
+							</div>
+						</form>
+					</div>
 				</div>
 
 				<div className={style.divDetail}>
