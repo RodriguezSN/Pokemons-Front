@@ -27,14 +27,14 @@ const Forms = () => {
 		setPost({ ...post, image: urlImgForm });
 	}, [urlImgForm]);
 	const [errors, setErrors] = useState({
-		name: "Nombra a tu Pokemon!!",
-		image: "Foto de tu Pokemon!!",
-		hp: "Cuanta vida tiene?",
-		attack: "Cuanto daño hace?",
-		defense: "Cuanta defensa tiene?",
-		speed: "Cual es su velocidad?",
-		height: "Cual es su altura?",
-		weight: "Cuanto pesa tu pokemon?"
+		name: "name of your pokemon?",
+		image: "",
+		hp: "indicates the hp",
+		attack: "indicates the attack",
+		defense: "indicates the defense",
+		speed: "indicates the speed",
+		height: "indicates the height",
+		weight: "indicates the weight"
 	});
 	const imgTypePokemon = [
 		{
@@ -206,7 +206,7 @@ const Forms = () => {
 										/>
 										<div className={style.errorPadre}>
 											<div className={errors.name ? style.error : null}>
-												<p style={{ color: "coral" }}>
+												<p style={{ color: " rgb(84, 13, 13)" }}>
 													{errors.name ? errors.name : null}
 												</p>
 											</div>
@@ -231,7 +231,7 @@ const Forms = () => {
 										/>
 										<div className={style.errorPadre}>
 											<div className={errors.hp ? style.error : null}>
-												<p style={{ color: "white" }}>
+												<p style={{ color: " rgb(84, 13, 13)" }}>
 													{errors.hp ? errors.hp : null}
 												</p>
 											</div>
@@ -250,7 +250,7 @@ const Forms = () => {
 										/>
 										<div className={style.errorPadre}>
 											<div className={errors.attack ? style.error : null}>
-												<p style={{ color: "white" }}>
+												<p style={{ color: " rgb(84, 13, 13)" }}>
 													{errors.attack ? errors.attack : null}
 												</p>
 											</div>
@@ -269,7 +269,7 @@ const Forms = () => {
 										/>
 										<div className={style.errorPadre}>
 											<div className={errors.defense ? style.error : null}>
-												<p style={{ color: "white" }}>
+												<p style={{ color: " rgb(84, 13, 13)" }}>
 													{errors.defense ? errors.defense : null}
 												</p>
 											</div>
@@ -289,7 +289,7 @@ const Forms = () => {
 										/>
 										<div className={style.errorPadre}>
 											<div className={errors.speed ? style.error : null}>
-												<p style={{ color: "white" }}>
+												<p style={{ color: " rgb(84, 13, 13)" }}>
 													{errors.speed ? errors.speed : null}
 												</p>
 											</div>
@@ -313,7 +313,7 @@ const Forms = () => {
 										/>
 										<div className={style.errorPadre}>
 											<div className={errors.height ? style.error : null}>
-												<p style={{ color: "white" }}>
+												<p style={{ color: " rgb(84, 13, 13)" }}>
 													{errors.height ? errors.height : null}
 												</p>
 											</div>
@@ -337,7 +337,7 @@ const Forms = () => {
 										/>
 										<div className={style.errorPadre}>
 											<div className={errors.weight ? style.error : null}>
-												<p style={{ color: "white" }}>
+												<p style={{ color: " rgb(84, 13, 13)" }}>
 													{errors.weight ? errors.weight : null}
 												</p>
 											</div>
