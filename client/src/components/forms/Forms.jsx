@@ -204,11 +204,13 @@ const Forms = () => {
 											onChange={handleChange}
 											maxLength="20"
 										/>
-									</div>
-									<div className={style.error}>
-										<p style={{ color: "coral" }}>
-											{errors.name ? errors.name : null}
-										</p>
+										<div className={style.errorPadre}>
+											<div className={errors.name ? style.error : null}>
+												<p style={{ color: "coral" }}>
+													{errors.name ? errors.name : null}
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div className={style.divName}>
@@ -227,11 +229,13 @@ const Forms = () => {
 											id="hp"
 											onChange={handleChange}
 										/>
-									</div>
-									<div className={style.error}>
-										<p style={{ color: "coral" }}>
-											{errors.hp ? errors.hp : null}
-										</p>
+										<div className={style.errorPadre}>
+											<div className={errors.hp ? style.error : null}>
+												<p style={{ color: "white" }}>
+													{errors.hp ? errors.hp : null}
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div className={style.divName}>
@@ -244,11 +248,13 @@ const Forms = () => {
 											id="attack"
 											onChange={handleChange}
 										/>
-									</div>
-									<div className={style.error}>
-										<p style={{ color: "coral" }}>
-											{errors.attack ? errors.attack : null}
-										</p>
+										<div className={style.errorPadre}>
+											<div className={errors.attack ? style.error : null}>
+												<p style={{ color: "white" }}>
+													{errors.attack ? errors.attack : null}
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div className={style.divName}>
@@ -261,11 +267,13 @@ const Forms = () => {
 											id="defense"
 											onChange={handleChange}
 										/>
-									</div>
-									<div className={style.error}>
-										<p style={{ color: "coral" }}>
-											{errors.defense ? errors.defense : null}
-										</p>
+										<div className={style.errorPadre}>
+											<div className={errors.defense ? style.error : null}>
+												<p style={{ color: "white" }}>
+													{errors.defense ? errors.defense : null}
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div className={style.divName}>
@@ -279,12 +287,19 @@ const Forms = () => {
 											onChange={handleChange}
 											maxLength="4"
 										/>
+										<div className={style.errorPadre}>
+											<div className={errors.speed ? style.error : null}>
+												<p style={{ color: "white" }}>
+													{errors.speed ? errors.speed : null}
+												</p>
+											</div>
+										</div>
 									</div>
-									<div className={style.error}>
+									{/* <div className={style.error}>
 										<p style={{ color: "coral" }}>
 											{errors.speed ? errors.speed : null}
 										</p>
-									</div>
+									</div> */}
 								</div>
 								<div className={style.divName}>
 									<div className={style.inputs}>
@@ -296,14 +311,21 @@ const Forms = () => {
 											id="height"
 											onChange={handleChange}
 										/>
+										<div className={style.errorPadre}>
+											<div className={errors.height ? style.error : null}>
+												<p style={{ color: "white" }}>
+													{errors.height ? errors.height : null}
+												</p>
+											</div>
+										</div>
 									</div>
-									<div className={style.error}>
+									{/* <div className={style.error}>
 										<p style={{ color: "coral" }}>
 											{errors.height ? errors.height : null}
 										</p>
-									</div>
+									</div> */}
 								</div>
-								<div className={style.divNameB}>
+								<div className={style.divNameBottom}>
 									<div className={style.inputs}>
 										<label htmlFor="weight">Weight: </label>
 										<input
@@ -313,12 +335,19 @@ const Forms = () => {
 											id="weight"
 											onChange={handleChange}
 										/>
+										<div className={style.errorPadre}>
+											<div className={errors.weight ? style.error : null}>
+												<p style={{ color: "white" }}>
+													{errors.weight ? errors.weight : null}
+												</p>
+											</div>
+										</div>
 									</div>
-									<div className={style.error}>
+									{/* <div className={style.error}>
 										<p style={{ color: "coral" }}>
 											{errors.weight ? errors.weight : null}
 										</p>
-									</div>
+									</div> */}
 								</div>
 							</div>
 							<div className={style.divTypesSelect}>
