@@ -74,6 +74,8 @@ form {
 	width: 100%;
 }
 .divName {
+	backdrop-filter: blur(5px);
+	background-color: rgba(79, 79, 161, 0.159);
 	border-left: 1vh ridge rgb(153, 34, 34);
 	border-right: 1.5vh ridge rgb(153, 34, 34);
 	border-radius: 10px;
@@ -112,6 +114,8 @@ form {
 }
 
 .divNameT {
+	backdrop-filter: blur(5px);
+	background-color: rgba(79, 79, 161, 0.159);
 	border-top: 1vh ridge rgb(153, 34, 34);
 	border-left: 1vh ridge rgb(153, 34, 34);
 	border-right: 1.5vh ridge rgb(153, 34, 34);
@@ -151,6 +155,8 @@ form {
 }
 
 .divNameBottom {
+	backdrop-filter: blur(5px);
+	background-color: rgba(79, 79, 161, 0.159);
 	border-bottom: 1vh ridge rgb(153, 34, 34);
 	border-left: 1vh ridge rgb(153, 34, 34);
 	border-right: 1.5vh ridge rgb(153, 34, 34);
@@ -272,6 +278,7 @@ form {
 	display: block;
 }
 .divTypesSelect {
+	backdrop-filter: blur(5px);
 	background-color: rgba(241, 191, 120, 0.638);
 	width: 100%;
 	height: 30%;
@@ -351,6 +358,7 @@ form {
 .divDetailInterno {
 	margin: 3%;
 	height: 88%;
+	backdrop-filter: blur(5px);
 	background-color: rgba(241, 191, 120, 0.638);
 	border: 1.5vh ridge rgb(153, 34, 34);
 	border-radius: 10px;
@@ -463,6 +471,8 @@ form {
 }
 .divDetailProps {
 	background-image: url("https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725935334/jzberu8aemb1yt3jxn9u.png");
+	background-repeat: no-repeat;
+	background-size: cover;
 	border-top: 1.5vh ridge rgb(153, 34, 34);
 	width: 100%;
 	height: 28%;

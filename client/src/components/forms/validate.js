@@ -8,8 +8,8 @@ export default function validate(input) {
 	//? NAME
 	if (input.name === "") errors.name = "name of your pokemon?";
 	else {
-		if (input.name.length <= 1) errors.name = "Minimo 2 caracteres";
-		if (input.name.length > 30) errors.name = "Maximo 30 caracteres";
+		if (input.name.length <= 1) errors.name = "Min two characters";
+		if (input.name.length > 30) errors.name = "Max 20 characters";
 		if (regexNumeros.test(input.name)) errors.name = "Cannot contain Numbers";
 		if (regexSimbolos.test(input.name)) errors.name = "Cannot contain Symbols";
 	}
