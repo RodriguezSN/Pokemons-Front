@@ -1,5 +1,5 @@
 import style from "./Detail.module.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getPokemonId } from "../../redux/actions";
 import { Link, useParams } from "react-router-dom";
@@ -9,11 +9,14 @@ const Detail = () => {
 
 	const dispatch = useDispatch();
 	const pokemon = useSelector((state) => state.pokemonById);
-
+	const [landing, setLanding] = useState(true);
 	useEffect(() => {
 		const axiosData = async () => {
 			try {
 				dispatch(getPokemonId(id));
+				setTimeout(() => {
+					setLanding(false);
+				}, 1500);
 			} catch (error) {
 				console.log(error);
 			}
@@ -55,7 +58,11 @@ const Detail = () => {
 						<h1>{pokemon.name}</h1>
 						<h2>N.° {idPokemon}</h2>
 					</div>
-					<img src={pokemon.image} alt={pokemon.name} />
+					{landing ? (
+						<img src="https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif" />
+					) : (
+						<img src={pokemon.image} alt={pokemon.name} />
+					)}
 				</div>
 				<div className={style.pokemonDetalles}>
 					<h2>Life: {pokemon.hp} Hp</h2>

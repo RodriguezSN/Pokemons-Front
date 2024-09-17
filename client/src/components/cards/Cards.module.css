@@ -51,14 +51,6 @@
 	overflow: hidden;
 	position: relative;
 	border: 2px solid black;
-	img {
-		display: flex;
-		/* align-items: center; */
-		margin-top: 50%;
-		margin-left: 15%;
-		max-height: 250px;
-		max-width: 200px;
-	}
 }
 .fuminado {
 	background-color: rgba(50, 46, 46, 0.638);

@@ -14,7 +14,7 @@ const Cards = ({ page, setPage }) => {
 				dispatch(getAllPokemons());
 				setTimeout(() => {
 					setLoanding(false);
-				}, 1000);
+				}, 800);
 			} catch (error) {
 				console.log("Error en los datos", error);
 			}
@@ -55,7 +55,7 @@ const Cards = ({ page, setPage }) => {
 						<div className={style.cardLanding}>
 							<div className={style.fuminado}>
 								<img
-									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									src="https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
 									alt=""
 								/>
 							</div>
@@ -63,7 +63,7 @@ const Cards = ({ page, setPage }) => {
 						<div className={style.cardLanding}>
 							<div className={style.fuminado}>
 								<img
-									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									src="https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
 									alt=""
 								/>
 							</div>
@@ -71,7 +71,7 @@ const Cards = ({ page, setPage }) => {
 						<div className={style.cardLanding}>
 							<div className={style.fuminado}>
 								<img
-									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									src="https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
 									alt=""
 								/>
 							</div>
