@@ -12,7 +12,9 @@ const Cards = ({ page, setPage }) => {
 			try {
 				setPage(1);
 				dispatch(getAllPokemons());
-				setLoanding(false);
+				setTimeout(() => {
+					setLoanding(false);
+				}, 1000);
 			} catch (error) {
 				console.log("Error en los datos", error);
 			}
@@ -49,11 +51,103 @@ const Cards = ({ page, setPage }) => {
 		<div className={style.divGeneralDesdeCards}>
 			<div className={style.divCards}>
 				{loanding ? (
-					<div>
-						<img
-							src="https://media.tenor.com/fSsxftCb8w0AAAAi/pikachu-running.gif"
-							alt=""
-						/>
+					<div className={style.divHijoCardsLandings}>
+						<div className={style.cardLanding}>
+							<div className={style.fuminado}>
+								<img
+									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div className={style.cardLanding}>
+							<div className={style.fuminado}>
+								<img
+									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div className={style.cardLanding}>
+							<div className={style.fuminado}>
+								<img
+									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div className={style.cardLanding}>
+							<div className={style.fuminado}>
+								<img
+									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div className={style.cardLanding}>
+							<div className={style.fuminado}>
+								<img
+									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div className={style.cardLanding}>
+							<div className={style.fuminado}>
+								<img
+									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div className={style.cardLanding}>
+							<div className={style.fuminado}>
+								<img
+									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div className={style.cardLanding}>
+							<div className={style.fuminado}>
+								<img
+									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div className={style.cardLanding}>
+							<div className={style.fuminado}>
+								<img
+									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div className={style.cardLanding}>
+							<div className={style.fuminado}>
+								<img
+									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div className={style.cardLanding}>
+							<div className={style.fuminado}>
+								<img
+									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div className={style.cardLanding}>
+							<div className={style.fuminado}>
+								<img
+									src="	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1726603340/worxnyi7uszwfabjctbg.gif"
+									alt=""
+								/>
+							</div>
+						</div>
 					</div>
 				) : (
 					<div className={style.divHijoCards}>
