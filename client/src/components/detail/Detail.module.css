@@ -47,7 +47,8 @@
 .pokemonDetail {
 	background-color: rgba(12, 82, 88, 0.812);
 	backdrop-filter: blur(10px); /* Aplicar desenfoque */
-	border: 5px solid rgba(8, 59, 63, 0.812);
+	/* border: 5px solid rgba(8, 59, 63, 0.812); */
+	border: 1.5vh ridge rgba(8, 59, 63, 0.812);
 	margin: 100px;
 	margin-top: 20px;
 	height: 900px;
@@ -61,7 +62,8 @@
 .pokemonNameImg {
 	background-color: rgba(255, 0, 0, 0.378);
 	backdrop-filter: blur(10px); /* Aplicar desenfoque */
-	border: 4px solid rgba(255, 6, 6, 0.457);
+	/* border: 4px solid rgba(255, 6, 6, 0.457); */
+	border: 1.5vh ridge rgb(153, 34, 34);
 	background-image: url("	https://res.cloudinary.com/dwvdvzg1k/image/upload/v1725922139/enkvgrxqcic8cfdua1q9.gif");
 	background-position: bottom;
 	background-repeat: no-repeat;
@@ -98,7 +100,8 @@
 .pokemonDetalles {
 	background-color: rgba(255, 0, 0, 0.378);
 	backdrop-filter: blur(10px); /* Aplicar desenfoque */
-	border: 4px solid rgba(255, 6, 6, 0.457);
+	/* border: 4px solid rgba(255, 6, 6, 0.457); */
+	border: 1.5vh ridge rgb(153, 34, 34);
 	height: 600px;
 	width: 300px;
 	display: flex;
