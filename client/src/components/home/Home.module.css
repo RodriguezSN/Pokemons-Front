@@ -13,3 +13,12 @@
 .h1Home {
 	background-color: antiquewhite;
 }
+
+@media (max-width: 412px) {
+	.divConteinerHome {
+		/* background-image: none;
+		background-color: rgb(39, 16, 2); */
+		background-position: center;
+		background-size: auto 100%;
+	}
+}
