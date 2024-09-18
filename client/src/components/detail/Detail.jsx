@@ -16,7 +16,7 @@ const Detail = () => {
 				dispatch(getPokemonId(id));
 				setTimeout(() => {
 					setLanding(false);
-				}, 1500);
+				}, 2000);
 			} catch (error) {
 				console.log(error);
 			}
