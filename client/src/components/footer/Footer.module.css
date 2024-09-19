@@ -44,3 +44,24 @@
 		}
 	}
 }
+
+@media (max-width: 412px) {
+	.divPadre {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		height: auto;
+	}
+	.divName {
+		width: 100%;
+		h2 {
+			font-size: 180%;
+		}
+	}
+	.divEnlaces {
+		width: 100%;
+	}
+	.divCopy {
+		width: 100%;
+	}
+}
