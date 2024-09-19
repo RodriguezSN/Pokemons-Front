@@ -87,3 +87,31 @@
 		padding-left: 10%;
 	}
 }
+
+@media (max-width: 412px) {
+	.filtros {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		width: 80%;
+	}
+	.filtroTypes {
+		width: 90%;
+		label {
+			width: 50%;
+		}
+	}
+	.filtroAZ {
+		width: 90%;
+		label {
+			width: 50%;
+		}
+	}
+	.filtroDBoAPI {
+		width: 90%;
+		label {
+			width: 50%;
+			margin-right: 10%;
+		}
+	}
+}

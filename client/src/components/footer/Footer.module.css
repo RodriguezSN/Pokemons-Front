@@ -8,7 +8,12 @@
 	display: flex;
 	margin-top: 25px;
 }
-
+.divHijoDesktop {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+}
 .divName {
 	width: 25%;
 	padding: 0%;

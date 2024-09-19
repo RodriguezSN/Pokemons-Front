@@ -51,7 +51,7 @@ const Footer = () => {
 					</div>
 				</div>
 			) : (
-				<div style={style.divHijo}>
+				<div className={style.divHijoDesktop}>
 					<div className={style.divName}>
 						<h2>Proyecto Pokedex</h2>
 					</div>
