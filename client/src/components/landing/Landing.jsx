@@ -6,9 +6,11 @@ const Landing = () => {
 	return (
 		<div className={style.divLanding}>
 			<h3 className={style.hLanding}>Welcome to the Pokedex</h3>
-			<Link to="/home">
-				<button>Start</button>
-			</Link>
+			<div className={style.buttonEnter}>
+				<Link to="/home">
+					<button>Start</button>
+				</Link>
+			</div>
 		</div>
 	);
 };
