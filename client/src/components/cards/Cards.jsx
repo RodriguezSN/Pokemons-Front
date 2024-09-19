@@ -14,7 +14,7 @@ const Cards = ({ page, setPage }) => {
 				dispatch(getAllPokemons());
 				setTimeout(() => {
 					setLoanding(false);
-				}, 1000);
+				}, 10000);
 			} catch (error) {
 				console.log("Error en los datos", error);
 			}

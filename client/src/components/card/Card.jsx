@@ -6,7 +6,6 @@ const Card = ({ id, name, image, type }) => {
 	return (
 		<div className={style.divConteinerCard} key={id}>
 			<h1>{name}</h1>
-			{/* <h3>Type:</h3> */}
 			<div className={style.additionalInfo}>
 				<div className={style.divTypePadre}>
 					<div className={style.divTitleType}>

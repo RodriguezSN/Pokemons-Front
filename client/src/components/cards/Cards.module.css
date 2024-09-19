@@ -97,3 +97,44 @@
 		box-shadow: 0 0 20px rgba(255, 255, 255, 0.79);
 	}
 }
+
+@media (max-width: 412px) {
+	.divGeneralDesdeCards {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.divCards {
+		width: 100%;
+	}
+	.divHijoCards {
+		width: 90%;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	.divHijoCardsLandings {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.cardLanding {
+		width: 90%;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	.paginadoBelow {
+		display: flex;
+		width: 90%;
+
+		button {
+			width: 15%;
+			margin: 2%;
+			display: flex;
+			justify-content: center;
+		}
+		span {
+			width: 20%;
+			height: 100%;
+		}
+	}
+}
