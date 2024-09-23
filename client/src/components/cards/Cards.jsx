@@ -47,6 +47,7 @@ const Cards = ({ page, setPage }) => {
 		const totalPages = Math.ceil(allPokemons.length / pokemonsForPage);
 		setPage(totalPages);
 	};
+
 	return (
 		<div className={style.divGeneralDesdeCards}>
 			<div className={style.divCards}>

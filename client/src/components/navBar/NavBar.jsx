@@ -32,6 +32,9 @@ const NavBar = () => {
 		setName(value);
 	};
 	const handleSearch = () => {
+		if (name === "") {
+			return dispatch(getAllPokemons());
+		}
 		dispatch(getPokemonsName(name));
 		setName("");
 	};
