@@ -59,9 +59,9 @@
 	}
 	.divName {
 		width: 100%;
-		h2 {
-			font-size: 180%;
-		}
+	}
+	.divName h2 {
+		font-size: 180%;
 	}
 	.divEnlaces {
 		width: 100%;

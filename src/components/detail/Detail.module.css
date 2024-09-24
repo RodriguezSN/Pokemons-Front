@@ -160,15 +160,15 @@
 		width: 100%;
 		display: flex;
 		margin-top: 5%;
-		a {
-			width: 50%;
-			margin: 0;
-			padding: 0;
-			button {
-				margin: 0;
-				width: 100%;
-			}
-		}
+	}
+	.divBack a {
+		width: 50%;
+		margin: 0;
+		padding: 0;
+	}
+	.divBack a button {
+		margin: 0;
+		width: 100%;
 	}
 	.pokemonDetail {
 		width: 90%;
@@ -185,21 +185,21 @@
 		width: 80%;
 		height: 60%;
 		margin: 5% 0% 2% 0%;
-		img {
-			width: 50%;
-			height: 50%;
-		}
-		.pokemonNameId {
-			width: 100%;
-			height: 100%;
-			align-items: center;
-			h1 {
-				font-size: 150%;
-			}
-			h2 {
-				font-size: 150%;
-			}
-		}
+	}
+	.pokemonNameImg img {
+		width: 50%;
+		height: 50%;
+	}
+	.pokemonNameId {
+		width: 100%;
+		height: 100%;
+		align-items: center;
+	}
+	.pokemonNameId h1 {
+		font-size: 150%;
+	}
+	.pokemonNameId h2 {
+		font-size: 150%;
 	}
 	.pokemonDetalles {
 		margin: 2% 0% 5% 0%;

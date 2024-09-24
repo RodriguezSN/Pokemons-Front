@@ -97,21 +97,21 @@
 	}
 	.filtroTypes {
 		width: 90%;
-		label {
-			width: 50%;
-		}
+	}
+	.filtroTypes label {
+		width: 50%;
 	}
 	.filtroAZ {
 		width: 90%;
-		label {
-			width: 50%;
-		}
+	}
+	.filtroAZ label {
+		width: 50%;
 	}
 	.filtroDBoAPI {
 		width: 90%;
-		label {
-			width: 50%;
-			margin-right: 10%;
-		}
+	}
+	.filtroDBoAPI label {
+		width: 50%;
+		margin-right: 10%;
 	}
 }

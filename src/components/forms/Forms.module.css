@@ -567,31 +567,31 @@ form {
 		/* background-color: blue; */
 		flex-direction: column;
 		width: 100%;
-		.divTittle {
-			margin-right: 5%;
-			margin-left: 5%;
-			/* background-color: rgb(255, 170, 0); */
-			width: 90%;
-			height: 100px;
-			h1 {
-				font-size: 4vh;
-			}
-		}
-		.divBack {
-			width: auto;
-			background-color: #9f897d00;
-			margin-top: 5%;
-			margin-bottom: 5%;
-			button {
-				height: 8vh;
-				transition: box-shadow 0.7s ease;
-				border-radius: 20px;
-				&:hover {
-					border-radius: 20px;
-					background-color: rgba(69, 120, 154, 0.752);
-					box-shadow: 0 0 20px rgba(255, 255, 255, 0.79);
-				}
-			}
+	}
+	.divTittle {
+		margin-right: 5%;
+		margin-left: 5%;
+		/* background-color: rgb(255, 170, 0); */
+		width: 90%;
+		height: 100px;
+	}
+	.divTittle h1 {
+		font-size: 4vh;
+	}
+	.divBack {
+		width: auto;
+		background-color: #9f897d00;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	.divBack button {
+		height: 8vh;
+		transition: box-shadow 0.7s ease;
+		border-radius: 20px;
+		&:hover {
+			border-radius: 20px;
+			background-color: rgba(69, 120, 154, 0.752);
+			box-shadow: 0 0 20px rgba(255, 255, 255, 0.79);
 		}
 	}
 	.divBody {
@@ -607,72 +607,72 @@ form {
 	.divForm {
 		width: 100%;
 		margin: 0;
-		form {
-			width: 100%;
-		}
-		.divEx {
-			width: 100%;
-		}
+	}
+	.divForm form {
+		width: 100%;
+	}
+	.divEx {
+		width: 100%;
 	}
 	.divNameT {
 		width: 85%;
 		margin-left: 5%;
 		margin-right: 5%;
-		.inputs {
-			display: flex;
-			justify-content: space-between;
-			label {
-				margin-left: 5%;
-				font-size: 150%;
-				font-family: Arial, Helvetica, sans-serif;
-				font-weight: 900;
-				width: 40%;
-			}
-			input {
-				width: 28%;
-				margin-left: 0%;
-			}
-		}
+	}
+	.inputs {
+		display: flex;
+		justify-content: space-between;
+	}
+	.inputs label {
+		margin-left: 5%;
+		font-size: 150%;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 900;
+		width: 40%;
+	}
+	.inputs input {
+		width: 28%;
+		margin-left: 0%;
 	}
 	.divNameBottom {
 		width: 85%;
 		margin-left: 5%;
 		margin-right: 5%;
-		.inputs {
-			display: flex;
-			justify-content: space-between;
-			label {
-				margin-left: 5%;
-				font-size: 150%;
-				font-family: Arial, Helvetica, sans-serif;
-				font-weight: 900;
-				width: 40%;
-			}
-			input {
-				width: 28%;
-				margin-left: 0%;
-			}
-		}
+	}
+	.inputs {
+		display: flex;
+		justify-content: space-between;
+	}
+	.inputs label {
+		margin-left: 5%;
+		font-size: 150%;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 900;
+		width: 40%;
+	}
+	.inputs input {
+		width: 28%;
+		margin-left: 0%;
 	}
 	.divName {
 		width: 85%;
 		margin-left: 5%;
 		margin-right: 5%;
-		.inputs {
-			display: flex;
-			justify-content: space-between;
-			label {
-				margin-left: 5%;
-				font-size: 150%;
-				font-family: Arial, Helvetica, sans-serif;
-				font-weight: 900;
-				width: 40%;
-			}
-			input {
-				width: 28%;
-				margin-left: 0%;
-			}
-		}
+	}
+	.inputs {
+		display: flex;
+		justify-content: space-between;
+	}
+	.inputs label {
+		margin-left: 5%;
+		font-size: 150%;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 900;
+		width: 40%;
+	}
+	.inputs input {
+		width: 28%;
+		margin-left: 0%;
 	}
 	.divDetail {
 		width: 100%;
@@ -686,11 +686,11 @@ form {
 	.typesButton {
 		width: 30%;
 		margin: 2%;
-		button {
-			padding: 15%;
-			width: 100%;
-			font-weight: 600;
-		}
+	}
+	.typesButton button {
+		padding: 15%;
+		width: 100%;
+		font-weight: 600;
 	}
 	.buttonSubmit {
 		position: relative;
@@ -698,80 +698,77 @@ form {
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		button {
-			justify-content: center;
-			width: 30%;
-		}
+	}
+	.buttonSubmit button {
+		justify-content: center;
+		width: 30%;
 	}
 	.divDetail {
 		display: flex;
 		flex-direction: column;
 		width: 85%;
 		margin: 0% 2% 0% 2%;
-		.h1DivDetail {
-			background-color: rgba(92, 9, 9, 0.402);
-			margin: 2% 5% 2% 5%;
-			width: 85%;
-			min-height: 10%;
-			height: auto;
-			font-size: 300%;
-		}
-		.divDetailInterno {
-			margin-top: 30%;
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-			min-height: 80vh;
-			height: auto;
-			.divSup {
-				display: flex;
-				flex-direction: column;
-				width: 100%;
-				height: 80%;
-				border: none;
-				.divDetailImg {
-					border: none;
-					width: 100%;
-					height: 50%;
-				}
-				.divDetailTypes {
-					border: none;
-					height: auto;
-					width: 100%;
-					display: flex;
-					flex-direction: column;
-					border-top: 1.5vh ridge rgb(153, 34, 34);
-					.supDivDetailTypes {
-						width: 100%;
-						height: auto;
-						h1 {
-							margin: 2% 0% 2% 0%;
-							font-size: 250%;
-						}
-						/* background-color: rebeccapurple; */
-					}
-					.infeDivDetailTypes {
-						width: 100%;
-						min-height: 100%;
-						height: auto;
-						/* background-color: blue; */
-						.divTypeH3Img {
-							margin: 5% 2% 2% 1%;
-						}
-					}
-				}
-			}
-			.divDetailProps {
-				height: auto;
+	}
+	.h1DivDetail {
+		background-color: rgba(92, 9, 9, 0.402);
+		margin: 2% 5% 2% 5%;
+		width: 85%;
+		min-height: 10%;
+		height: auto;
+		font-size: 300%;
+	}
+	.divDetailInterno {
+		margin-top: 30%;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		min-height: 80vh;
+		height: auto;
+	}
+	.divSup {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 80%;
+		border: none;
+	}
+	.divDetailImg {
+		border: none;
+		width: 100%;
+		height: 50%;
+	}
+	.divDetailTypes {
+		border: none;
+		height: auto;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		border-top: 1.5vh ridge rgb(153, 34, 34);
+	}
+	.supDivDetailTypes {
+		width: 100%;
+		height: auto;
+	}
+	.supDivDetailTypes h1 {
+		margin: 2% 0% 2% 0%;
+		font-size: 250%;
+	}
+	.infeDivDetailTypes {
+		width: 100%;
+		min-height: 100%;
+		height: auto;
+		/* background-color: blue; */
+	}
+	.divTypeH3Img {
+		margin: 5% 2% 2% 1%;
+	}
+	.divDetailProps {
+		height: auto;
+	}
 
-				.divDetailProp {
-					h3 {
-						font-size: 120%;
-						font-family: Arial, Helvetica, sans-serif;
-						font-weight: 900;
-					}
-				}
-			}
-		}
+	.divDetailProp h3 {
+		font-size: 120%;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 900;
 	}
 }
