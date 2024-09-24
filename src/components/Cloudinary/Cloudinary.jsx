@@ -3,15 +3,10 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getUrlImgForms } from "../../redux/actions";
 import style from "./Cloudinary.module.css";
-require("dotenv").config();
+
 const Cloudinary = () => {
-	// const preset_name = "lpwg5u66";
-	// const cloud_name = "dwvdvzg1k";
 	const preset_name = process.env.PRESET_NAME;
 	const cloud_name = process.env.CLOUD_NAME;
-
-	// const preset_name = "dasdmka";
-	// const cloud_name = "didoessvf";
 
 	const dispatch = useDispatch();
 	const handleUrl = (imgUrl) => {
@@ -50,15 +45,12 @@ const Cloudinary = () => {
 
 	return (
 		<div className={style.divPadre}>
-			{/* <h1>Cargar imagen</h1> */}
 			<input
 				type="file"
 				name="file"
 				placeholder="subir img"
 				onChange={(e) => uploadImage(e)}
 			/>
-
-			{/* {loading ? <h1>Loanding...</h1> : <img src={image} alt="imagen subida" />} */}
 		</div>
 	);
 };
