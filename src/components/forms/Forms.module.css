@@ -552,7 +552,7 @@ form {
 	}
 }
 
-@media (device-width: 412px) {
+@media (max-width: 450px) {
 	body {
 		width: 100%;
 	}
