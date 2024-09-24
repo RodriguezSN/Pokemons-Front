@@ -13,7 +13,7 @@ import {
 export const getAllPokemons = () => {
 	return async (dispatch) => {
 		try {
-			const { data } = await axios.get(`http://localhost:3001/pokemon`);
+			const { data } = await axios.get(`/pokemon`);
 			const { pokemonsApi, pokemonsDb } = data;
 			const dataConcat = pokemonsApi.concat(pokemonsDb);
 			return dispatch({
@@ -29,7 +29,7 @@ export const getAllPokemons = () => {
 export const getAllTypes = () => {
 	return async (dispatch) => {
 		try {
-			const { data } = await axios.get(`http://localhost:3001/types`);
+			const { data } = await axios.get(`/types`);
 			return dispatch({
 				type: GET_ALL_TYPES,
 				payload: data
@@ -43,9 +43,7 @@ export const getAllTypes = () => {
 export const getPokemonsName = (name) => {
 	return async (dispatch) => {
 		try {
-			const { data } = await axios.get(
-				`http://localhost:3001/pokemon/name/${name}`
-			);
+			const { data } = await axios.get(`/pokemon/name/${name}`);
 			const { existeAPI, existeDB } = data;
 			if (existeAPI && existeDB) {
 				const dataConcat = existeAPI.concat(existeDB);
@@ -67,7 +65,7 @@ export const getPokemonsName = (name) => {
 export const getPokemonId = (id) => {
 	return async (dispatch) => {
 		try {
-			const { data } = await axios.get(`http://localhost:3001/pokemon/${id}`);
+			const { data } = await axios.get(`/pokemon/${id}`);
 			return dispatch({
 				type: GET_POKEMON_BY_ID,
 				payload: data
