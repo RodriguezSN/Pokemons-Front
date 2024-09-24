@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import App from "./App.jsx";
 import "./index.css";
 import store from "./redux/store.js";
-
+import axios from "axios";
 axios.defaults.baseURL = "https://pokemon-back-production-23c2.up.railway.app";
 // axios.defaults.baseURL = "http://localhost:3001";
 ReactDOM.createRoot(document.getElementById("root")).render(
