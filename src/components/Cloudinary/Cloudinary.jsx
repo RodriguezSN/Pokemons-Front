@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getUrlImgForms } from "../../redux/actions";
 import style from "./Cloudinary.module.css";
+require("dotenv").config();
 const Cloudinary = () => {
 	// const preset_name = "lpwg5u66";
 	// const cloud_name = "dwvdvzg1k";
