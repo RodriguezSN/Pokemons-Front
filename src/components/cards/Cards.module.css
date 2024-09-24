@@ -98,7 +98,7 @@
 	}
 }
 
-@media (device-width: 412px) {
+@media (max-width: 600px) {
 	.divGeneralDesdeCards {
 		display: flex;
 		flex-direction: column;

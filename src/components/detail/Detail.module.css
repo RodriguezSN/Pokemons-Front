@@ -134,7 +134,7 @@
 	margin-left: 8px;
 }
 
-@media (device-width: 412px) {
+@media (max-width: 600px) {
 	html,
 	body {
 		min-height: 100%;

@@ -50,7 +50,7 @@
 	}
 }
 
-@media (device-width: 412px) {
+@media (max-width: 600px) {
 	.divPadre {
 		width: 100%;
 		display: flex;
