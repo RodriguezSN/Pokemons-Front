@@ -5,8 +5,8 @@ import { getUrlImgForms } from "../../redux/actions";
 import style from "./Cloudinary.module.css";
 
 const Cloudinary = () => {
-	const preset_name = process.env.PRESET_NAME;
-	const cloud_name = process.env.CLOUD_NAME;
+	const preset_name = process.env.REACT_APP_PRESET_NAME;
+	const cloud_name = process.env.REACT_APP_CLOUD_NAME;
 
 	const dispatch = useDispatch();
 	const handleUrl = (imgUrl) => {
