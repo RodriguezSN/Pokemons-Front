@@ -133,7 +133,7 @@
 	}
 }
 
-@media (max-width: 412px) {
+@media (device-width: 412px) {
 	.divConteinerNav {
 		width: 90%;
 		height: 100%;
