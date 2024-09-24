@@ -14,11 +14,11 @@
 	background-color: antiquewhite;
 }
 
-@media (max-width: 412px) {
+@media (max-width: 600px) {
 	.divConteinerHome {
 		/* background-image: none;
 		background-color: rgb(39, 16, 2); */
 		background-position: center;
-		background-size: auto 100%;
+		background-size: cover;
 	}
 }

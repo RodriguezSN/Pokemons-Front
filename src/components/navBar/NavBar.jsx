@@ -19,7 +19,7 @@ const NavBar = () => {
 
 	useEffect(() => {
 		window.addEventListener("resize", handleResize);
-		console.log(width);
+		// console.log(width);
 		setNavBar(false);
 		return () => {
 			window.removeEventListener("resize", handleResize);
@@ -44,7 +44,7 @@ const NavBar = () => {
 
 	return (
 		<div className={style.divConteinerNav}>
-			{width < 500 ? (
+			{width < 600 ? (
 				<div className={style.divMenuMobile}>
 					<div className={style.divPokedex}>
 						<h2>Pokedex</h2>
